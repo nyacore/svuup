@@ -20,16 +20,16 @@ Route::group([
     'prefix' => 'auth'
 ], function () {
     Route::post('login', 'Auth\AuthController@login');
-    Route::post('registration', 'Auth/AuthController@registration');
-    Route::post('logout', 'Auth/AuthController@logout');
-    Route::post('refresh', 'Auth/AuthController@refresh');
-    Route::post('me', 'Auth/AuthController@me');
+    Route::post('registration', 'Auth\AuthController@registration');
+    Route::post('logout', 'Auth\AuthController@logout');
+    Route::post('refresh', 'Auth\AuthController@refresh');
+    Route::post('me', 'Auth\AuthController@me');
 });
 
 Route::get('/','HomeController@index');
 // Route::get('/','Controller');
 Route::group([ 'prefix' => 'admin'], static function () {
-        Route::resource('leads', 'PersonalArea/LeadsController');
+        Route::resource('leads', 'PersonalArea\LeadsController');
         // Route::get('contacts', 'contactsController');
         // Route::get('reports', 'reportsController');
         // Route::get('calls','callsController');
