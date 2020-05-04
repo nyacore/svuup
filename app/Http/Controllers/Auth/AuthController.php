@@ -1,7 +1,9 @@
-<?php namespace App\Http\Controllers;
+<?php 
+namespace App\Http\Controllers\Auth;
 
 use App\User;
 use Illuminate\Support\Facades\Hash;
+use App\Http\Controllers\Controller;
 
 class AuthController extends Controller
 {
