@@ -16,21 +16,20 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-
 Route::group([
     'prefix' => 'auth'
 ], function () {
-    Route::post('login', 'AuthController@login');
-    Route::post('registration', 'AuthController@registration');
-    Route::post('logout', 'AuthController@logout');
-    Route::post('refresh', 'AuthController@refresh');
-    Route::post('me', 'AuthController@me');
+    Route::post('login', 'Auth/AuthController@login');
+    Route::post('registration', 'Auth/AuthController@registration');
+    Route::post('logout', 'Auth/AuthController@logout');
+    Route::post('refresh', 'Auth/AuthController@refresh');
+    Route::post('me', 'Auth/AuthController@me');
 });
 
 Route::get('/','HomeController@index');
 // Route::get('/','Controller');
 Route::group([ 'prefix' => 'admin'], static function () {
-        Route::resource('leads', 'LeadsController');
+        Route::resource('leads', 'PersonalArea/LeadsController');
         // Route::get('contacts', 'contactsController');
         // Route::get('reports', 'reportsController');
         // Route::get('calls','callsController');
