@@ -27,9 +27,11 @@ Vue.component('app', require('./components/App.vue').default);
 Vue.use(VueRouter);
 Vue.use(Vuex);
 
-const router = new VueRouter({
-    routes: require('./routes').default
-});
+
+const router = require('./routes').default;
+const store = require('./store').default;
+
+console.log(router);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -37,8 +39,9 @@ const router = new VueRouter({
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-const app = new Vue({
+new Vue({
     router,
     vuetify,
+    store,
     el: '#app',
 });
