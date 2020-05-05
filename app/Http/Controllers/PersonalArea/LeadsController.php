@@ -4,6 +4,7 @@ namespace App\Http\Controllers\PersonalArea;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Repositories\LeadsContacts;
 
 
 class LeadsController extends Controller
