@@ -4,10 +4,17 @@ namespace App\Http\Controllers\PersonalArea;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Repositories\LeadContacts;
 
-
-class LeadsController extends Controller
+class LeadController extends Controller
 {
+
+    protected $rep;
+
+    public function __construct(LeadContacts $leadsRep)
+    {
+        $this->rep = $leadsRep;
+    }
    /**
      * Display a listing of the resource.
      *
@@ -36,7 +43,8 @@ class LeadsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $obj = $this->rep->getCreateLeadsContact($request);
+        return response()->json($obj, 200);
     }
 
     /**
