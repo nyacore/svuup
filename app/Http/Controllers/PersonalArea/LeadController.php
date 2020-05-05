@@ -5,15 +5,18 @@ namespace App\Http\Controllers\PersonalArea;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Repositories\LeadContacts;
+use App\Http\Controllers\Auth\AuthController;
 
 class LeadController extends Controller
 {
 
     protected $rep;
+    protected $auth;
 
-    public function __construct(LeadContacts $leadsRep)
+    public function __construct(LeadContacts $leadsRep, AuthController $auth)
     {
         $this->rep = $leadsRep;
+        $this->auth = $auth;
     }
    /**
      * Display a listing of the resource.
@@ -22,7 +25,7 @@ class LeadController extends Controller
      */
     public function index()
     {
-    return response()->json('hellow', 200);
+    return $this->rep->getLeadList();
     }
 
     /**
@@ -30,10 +33,11 @@ class LeadController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Request $request)
+    public function create()
     {
-        
+        return response()->json($this->auth->me(),200);
     }
+
 
     /**
      * Store a newly created resource in storage.
@@ -43,8 +47,8 @@ class LeadController extends Controller
      */
     public function store(Request $request)
     {
-        $obj = $this->rep->getCreateLeadsContact($request);
-        return response()->json($obj, 200);
+        $obj = $this->rep->getCreateLeadContact($request);
+        return response()->json($obj, 201);
     }
 
     /**
@@ -66,7 +70,7 @@ class LeadController extends Controller
      */
     public function edit($id)
     {
-        //
+        return response()->json($this->rep->getLeadById($id),200);
     }
 
     /**
@@ -76,9 +80,11 @@ class LeadController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
-        //
+    public function update(Request $request,int $id)
+    {   
+        $obj = $this->rep->getLeadById($id);
+        $obj = $this->rep->
+        return response()->json([], 200);
     }
 
     /**
@@ -89,6 +95,6 @@ class LeadController extends Controller
      */
     public function destroy($id)
     {
-        //
+     $this->rep->destroyLeadById($id);
     }
 }

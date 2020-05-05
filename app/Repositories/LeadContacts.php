@@ -10,11 +10,15 @@ class LeadContacts extends Controller
 {
     protected $model;
 
-    // public function __construct(Leads $leads){
-    //     $this->model = $leads;
-    // }
+    public function __construct(Lead $lead){
+        $this->model = $lead;
+    }
 
-    public function getCreateLeadsContact($data):object
+    public function getLeadList(){
+        return $this->model->get();
+    }
+
+    public function getCreateLeadContact($data):object
     {
         $contact = new Lead();
         $contact['user_id'] = $data['user_id'];
@@ -34,4 +38,18 @@ class LeadContacts extends Controller
         $contact->save();
         return $contact;
     }
+
+    public function getLeadById(int $id)
+    {
+        return $this->model->find($id);
+    }
+
+    public function destroyLeadById(int $id):void
+    {
+        $this->getLeadById($id)->delete();
+    }
+
+    public function getUpdateLeadContact(int $id, Request $request){
+        
+    } 
 }
