@@ -1,12 +1,18 @@
 <?php
 
-namespace App\Model;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 
-class Leads extends Model 
+class Lead extends Model 
 {
+     /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    
     protected $fillable = [ 
             'user_id',
             'name',
@@ -25,8 +31,8 @@ class Leads extends Model
             'main', // Главный контакт
     ];
 
-    public function __construct()
-    {
-        return DB::table('leads_contact');
-    }
+    // public function __construct()
+    // {
+    //      DB::table('leads_contact');
+    // }
 }

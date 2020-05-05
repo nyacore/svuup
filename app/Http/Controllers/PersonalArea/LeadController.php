@@ -4,15 +4,14 @@ namespace App\Http\Controllers\PersonalArea;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Repositories\LeadsContacts;
+use App\Repositories\LeadContacts;
 
-
-class LeadsController extends Controller
+class LeadController extends Controller
 {
 
     protected $rep;
 
-    public function __construct(LeadsContacts $leadsRep)
+    public function __construct(LeadContacts $leadsRep)
     {
         $this->rep = $leadsRep;
     }

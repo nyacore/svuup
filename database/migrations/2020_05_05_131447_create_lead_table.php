@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateLeadsContactsTable extends Migration
+class CreateLeadTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateLeadsContactsTable extends Migration
      */
     public function up()
     {
-        Schema::create('leads_contacts', function (Blueprint $table) {
+        Schema::create('lead', function (Blueprint $table) {
             $table->id();
             $table->string('user_id'); // Id пользователя
             $table->string('name'); // Имя
@@ -41,6 +41,6 @@ class CreateLeadsContactsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('leads_contacts');
+        Schema::dropIfExists('lead');
     }
 }

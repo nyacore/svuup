@@ -2,20 +2,21 @@
 
 namespace App\Repositories;
 
-use App\Model\Leads;
+use App\Models\Lead;
 use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
 
-class LeadsContacts extends Leads
+class LeadContacts extends Controller
 {
     protected $model;
 
-    public function __construct(Leads $leads){
-        $this->model = $leads;
-    }
+    // public function __construct(Leads $leads){
+    //     $this->model = $leads;
+    // }
 
     public function getCreateLeadsContact($data):object
     {
-        $contact = new Leads();
+        $contact = new Lead();
         $contact['user_id'] = $data['user_id'];
         $contact['name']    = $data['name'];
         $contact['phones']  = $data['phones'];
@@ -32,5 +33,6 @@ class LeadsContacts extends Leads
         $contact['responsible']= $data['responsible'];
         $contact['main']    = $data['main'];
         $contact->save();
+        return $contact;
     }
 }

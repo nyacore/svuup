@@ -29,7 +29,7 @@ Route::group([
 Route::get('/','HomeController@index');
 // Route::get('/','Controller');
 Route::group([ 'prefix' => 'admin'], static function () {
-        Route::resource('leads', 'PersonalArea\LeadsController');
+        Route::resource('leads', 'PersonalArea\LeadController');
         // Route::get('contacts', 'contactsController');
         // Route::get('reports', 'reportsController');
         // Route::get('calls','callsController');
