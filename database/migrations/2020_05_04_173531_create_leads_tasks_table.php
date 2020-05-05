@@ -15,6 +15,7 @@ class CreateLeadsTasks extends Migration
     {
         Schema::create('leads_tasks', function (Blueprint $table) {
             $table->id();
+            $table->string('contact_id'); // ID родительского контакта
             $table->dateTime('date'); // Дата
             $table->string('type'); // Тип
             $table->string('contact');
