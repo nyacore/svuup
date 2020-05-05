@@ -1,15 +1,17 @@
 <?php 
 namespace App\Http\Controllers\Auth;
 
-use App\User;
+use App\Model\User;
 use Illuminate\Support\Facades\Hash;
 use App\Http\Controllers\Controller;
 
 class AuthController extends Controller
 {
+
+    protected $database;
     /**
      * Create a new AuthController instance.
-     *
+     *      *
      * @return void
      */
     public function __construct()
@@ -96,5 +98,9 @@ class AuthController extends Controller
             'token_type' => 'bearer',
             'expires_in' => auth()->factory()->getTTL() * 60
         ]);
+    }
+
+    public function firstRegistration(Request $request){
+
     }
 }
