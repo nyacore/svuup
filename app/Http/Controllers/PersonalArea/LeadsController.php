@@ -9,6 +9,13 @@ use App\Repositories\LeadsContacts;
 
 class LeadsController extends Controller
 {
+
+    protected $rep;
+
+    public function __construct(LeadsContacts $leadsRep)
+    {
+        $this->rep = $leadsRep;
+    }
    /**
      * Display a listing of the resource.
      *
@@ -37,7 +44,8 @@ class LeadsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $obj = $this->rep->getCreateLeadsContact($request);
+        return response()->json($obj, 200);
     }
 
     /**

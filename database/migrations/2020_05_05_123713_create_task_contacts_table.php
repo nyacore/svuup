@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateLeadsTasks extends Migration
+class CreateTaskContactsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateLeadsTasks extends Migration
      */
     public function up()
     {
-        Schema::create('leads_tasks', function (Blueprint $table) {
+        Schema::create('task_contacts', function (Blueprint $table) {
             $table->id();
             $table->string('contact_id'); // ID родительского контакта
             $table->dateTime('date'); // Дата
@@ -33,6 +33,6 @@ class CreateLeadsTasks extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('leads_tasks');
+        Schema::dropIfExists('task_contacts');
     }
 }

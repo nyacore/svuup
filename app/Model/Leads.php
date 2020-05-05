@@ -3,10 +3,12 @@
 namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class Leads extends Model 
 {
     protected $fillable = [ 
+            'user_id',
             'name',
             'phones', 
             'emails',
@@ -25,6 +27,6 @@ class Leads extends Model
 
     public function __construct()
     {
-        return DB::table('users');
+        return DB::table('leads_contact');
     }
 }
