@@ -36,3 +36,50 @@ Open repository: /var/www/html/skorozvon
 > git ls-files --stage -- /var/www/html/skorozvon/database/migrations/2020_05_04_173531_create_leads_tasks_table.php
 > git show :database/migrations/2020_05_04_155029_create_leads_contact_table.php
 > git ls-files --stage -- /var/www/html/skorozvon/database/migrations/2020_05_04_155029_create_leads_contact_table.php
+> git status -z -u
+> git ls-files --stage -- /var/www/html/skorozvon/database/migrations/2020_05_04_155029_create_leads_contact_table.php
+> git cat-file -s 6f5fa2510fd25e15e01c13a0f129270e778ea3f3
+> git show :database/migrations/2020_05_04_155029_create_leads_contact_table.php
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git ls-files --stage -- /var/www/html/skorozvon/database/migrations/2020_05_04_155029_create_leads_contact_table.php
+> git cat-file -s 6f5fa2510fd25e15e01c13a0f129270e778ea3f3
+> git show :database/migrations/2020_05_04_155029_create_leads_contact_table.php
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git check-ignore -v -z --stdin
+> git status -z -u
+> git ls-files --stage -- /var/www/html/skorozvon/database/migrations/2020_05_04_155029_create_leads_contact_table.php
+> git cat-file -s 6f5fa2510fd25e15e01c13a0f129270e778ea3f3
+> git show :database/migrations/2020_05_04_155029_create_leads_contact_table.php
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
