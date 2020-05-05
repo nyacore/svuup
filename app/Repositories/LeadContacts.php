@@ -31,7 +31,6 @@ class LeadContacts extends Controller
         $contact['tags']    = $data['tags'];
         $contact['desc']    = $data['desc'];
         $contact['responsible']= $data['responsible'];
-        $contact['main']    = $data['main'];
         $contact->save();
         return $contact;
     }
