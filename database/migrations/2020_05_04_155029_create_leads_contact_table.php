@@ -14,7 +14,8 @@ class CreateLeadsContact extends Migration
     public function up()
     {
         Schema::create('leads_contact', function (Blueprint $table) { 
-            $table->id(); 
+            $table->id();
+            $table->string('user_id'); // Id пользователя
             $table->string('name'); // Имя
             $table->string('phones')->unique(); // Телефоны 
             $table->string('emails')->unique(); // Электронные почты
