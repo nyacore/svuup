@@ -19,7 +19,7 @@ class LeadContacts extends Controller
     }
 
     public function getCreateLeadContact($data):object
-    {
+    { dd(1);
         $contact = new Lead();
         $contact['user_id'] = $data['user_id'];
         $contact['name']    = $data['name'];

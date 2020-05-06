@@ -1,0 +1,251 @@
+DEBUG     Checking PHPLS_ALLOW_XDEBUG
+DEBUG     The xdebug extension is not loaded
+
+[Info  - 17:53:37] 6540 files total
+[Info  - 17:53:37] Indexing project for definitions and static references
+Parsing file:///var/www/html/skorozvon/database/migrations/2020_05_05_131857_create_task_table.php
+Parsing file:///var/www/html/skorozvon/database/migrations/2020_05_05_141356_create_leads_table.php
+Parsing file:///var/www/html/skorozvon/database/migrations/2014_10_12_000000_create_users_table.php
+Parsing file:///var/www/html/skorozvon/database/migrations/2019_08_19_000000_create_failed_jobs_table.php
+Parsing file:///var/www/html/skorozvon/database/factories/UserFactory.php
+Parsing file:///var/www/html/skorozvon/database/seeds/DatabaseSeeder.php
+Parsing file:///var/www/html/skorozvon/tests/CreatesApplication.php
+Parsing file:///var/www/html/skorozvon/tests/Unit/ExampleTest.php
+Parsing file:///var/www/html/skorozvon/tests/TestCase.php
+Parsing file:///var/www/html/skorozvon/tests/Feature/ExampleTest.php
+Parsing file:///var/www/html/skorozvon/storage/framework/views/429cc9eae2310e1906dc3a2963f652c947d97990.php
+Parsing file:///var/www/html/skorozvon/storage/framework/views/bdb6d86804dea252487387c4f65455d648f81f86.php
+Parsing file:///var/www/html/skorozvon/storage/framework/views/5309b1641cf9863a761d410ea28729ffa9b9d40b.php
+Parsing file:///var/www/html/skorozvon/server.php
+Parsing file:///var/www/html/skorozvon/routes/console.php
+Parsing file:///var/www/html/skorozvon/routes/api.php
+Parsing file:///var/www/html/skorozvon/routes/channels.php
+Parsing file:///var/www/html/skorozvon/routes/web.php
+Parsing file:///var/www/html/skorozvon/config/services.php
+Parsing file:///var/www/html/skorozvon/config/view.php
+Parsing file:///var/www/html/skorozvon/config/database.php
+Parsing file:///var/www/html/skorozvon/config/jwt.php
+Parsing file:///var/www/html/skorozvon/config/cache.php
+Parsing file:///var/www/html/skorozvon/config/cors.php
+Parsing file:///var/www/html/skorozvon/config/broadcasting.php
+Parsing file:///var/www/html/skorozvon/config/queue.php
+Parsing file:///var/www/html/skorozvon/config/auth.php
+Parsing file:///var/www/html/skorozvon/config/app.php
+Parsing file:///var/www/html/skorozvon/config/filesystems.php
+Parsing file:///var/www/html/skorozvon/config/session.php
+Parsing file:///var/www/html/skorozvon/config/hashing.php
+Parsing file:///var/www/html/skorozvon/config/mail.php
+Parsing file:///var/www/html/skorozvon/config/logging.php
+Parsing file:///var/www/html/skorozvon/vendor/autoload.php
+Parsing file:///var/www/html/skorozvon/vendor/composer/autoload_files.php
+Parsing file:///var/www/html/skorozvon/vendor/composer/autoload_namespaces.php
+Parsing file:///var/www/html/skorozvon/vendor/composer/autoload_psr4.php
+Parsing file:///var/www/html/skorozvon/vendor/composer/autoload_real.php
+Parsing file:///var/www/html/skorozvon/vendor/composer/autoload_classmap.php
+[Info  - 17:53:38] Ignoring file file:///var/www/html/skorozvon/vendor/composer/autoload_classmap.php because it exceeds size limit of 150000 bytes (539040)
+Parsing file:///var/www/html/skorozvon/vendor/composer/ClassLoader.php
+Parsing file:///var/www/html/skorozvon/vendor/composer/autoload_static.php
+[Info  - 17:53:38] Ignoring file file:///var/www/html/skorozvon/vendor/composer/autoload_static.php because it exceeds size limit of 150000 bytes (595320)
+Parsing file:///var/www/html/skorozvon/app/Http/Controllers/Controller.php
+Parsing file:///var/www/html/skorozvon/app/Http/Controllers/PersonalArea/ContactsController.php
+Parsing file:///var/www/html/skorozvon/app/Http/Controllers/Auth/AuthController.php
+Parsing file:///var/www/html/skorozvon/app/Http/Kernel.php
+Parsing file:///var/www/html/skorozvon/app/Http/Middleware/Authenticate.php
+Parsing file:///var/www/html/skorozvon/app/Http/Middleware/TrustProxies.php
+Parsing file:///var/www/html/skorozvon/app/Http/Middleware/TrimStrings.php
+Parsing file:///var/www/html/skorozvon/app/Http/Middleware/CheckForMaintenanceMode.php
+Parsing file:///var/www/html/skorozvon/app/Http/Middleware/EncryptCookies.php
+Parsing file:///var/www/html/skorozvon/app/Http/Middleware/RedirectIfAuthenticated.php
+Parsing file:///var/www/html/skorozvon/app/Http/Middleware/VerifyCsrfToken.php
+Parsing file:///var/www/html/skorozvon/app/Repositories/LeadContacts.php
+Parsing file:///var/www/html/skorozvon/app/Exceptions/Handler.php
+Parsing file:///var/www/html/skorozvon/app/Models/Lead.php
+Parsing file:///var/www/html/skorozvon/app/Models/User.php
+Parsing file:///var/www/html/skorozvon/app/Providers/AuthServiceProvider.php
+Parsing file:///var/www/html/skorozvon/app/Providers/BroadcastServiceProvider.php
+Parsing file:///var/www/html/skorozvon/app/Providers/AppServiceProvider.php
+Parsing file:///var/www/html/skorozvon/app/Providers/RouteServiceProvider.php
+Parsing file:///var/www/html/skorozvon/app/Providers/EventServiceProvider.php
+Parsing file:///var/www/html/skorozvon/app/Console/Kernel.php
+Parsing file:///var/www/html/skorozvon/public/index.php
+Parsing file:///var/www/html/skorozvon/resources/lang/en/validation.php
+Parsing file:///var/www/html/skorozvon/resources/lang/en/pagination.php
+Parsing file:///var/www/html/skorozvon/resources/lang/en/auth.php
+Parsing file:///var/www/html/skorozvon/resources/lang/en/passwords.php
+Parsing file:///var/www/html/skorozvon/resources/views/welcome.blade.php
+Parsing file:///var/www/html/skorozvon/bootstrap/cache/services.php
+Parsing file:///var/www/html/skorozvon/bootstrap/cache/packages.php
+Parsing file:///var/www/html/skorozvon/bootstrap/app.php
+[Info  - 17:53:38] Indexing project for dynamic references
+Parsing file:///var/www/html/skorozvon/database/migrations/2020_05_05_131857_create_task_table.php
+Parsing file:///var/www/html/skorozvon/database/migrations/2020_05_05_141356_create_leads_table.php
+Parsing file:///var/www/html/skorozvon/database/migrations/2014_10_12_000000_create_users_table.php
+Parsing file:///var/www/html/skorozvon/database/migrations/2019_08_19_000000_create_failed_jobs_table.php
+Parsing file:///var/www/html/skorozvon/database/factories/UserFactory.php
+Parsing file:///var/www/html/skorozvon/database/seeds/DatabaseSeeder.php
+Parsing file:///var/www/html/skorozvon/tests/CreatesApplication.php
+Parsing file:///var/www/html/skorozvon/tests/Unit/ExampleTest.php
+Parsing file:///var/www/html/skorozvon/tests/TestCase.php
+Parsing file:///var/www/html/skorozvon/tests/Feature/ExampleTest.php
+Parsing file:///var/www/html/skorozvon/storage/framework/views/429cc9eae2310e1906dc3a2963f652c947d97990.php
+Parsing file:///var/www/html/skorozvon/storage/framework/views/bdb6d86804dea252487387c4f65455d648f81f86.php
+Parsing file:///var/www/html/skorozvon/storage/framework/views/5309b1641cf9863a761d410ea28729ffa9b9d40b.php
+Parsing file:///var/www/html/skorozvon/server.php
+Parsing file:///var/www/html/skorozvon/routes/console.php
+Parsing file:///var/www/html/skorozvon/routes/api.php
+Parsing file:///var/www/html/skorozvon/routes/channels.php
+Parsing file:///var/www/html/skorozvon/routes/web.php
+Parsing file:///var/www/html/skorozvon/config/services.php
+Parsing file:///var/www/html/skorozvon/config/view.php
+Parsing file:///var/www/html/skorozvon/config/database.php
+Parsing file:///var/www/html/skorozvon/config/jwt.php
+Parsing file:///var/www/html/skorozvon/config/cache.php
+Parsing file:///var/www/html/skorozvon/config/cors.php
+Parsing file:///var/www/html/skorozvon/config/broadcasting.php
+Parsing file:///var/www/html/skorozvon/config/queue.php
+Parsing file:///var/www/html/skorozvon/config/auth.php
+Parsing file:///var/www/html/skorozvon/config/app.php
+Parsing file:///var/www/html/skorozvon/config/filesystems.php
+Parsing file:///var/www/html/skorozvon/config/session.php
+Parsing file:///var/www/html/skorozvon/config/hashing.php
+Parsing file:///var/www/html/skorozvon/config/mail.php
+Parsing file:///var/www/html/skorozvon/config/logging.php
+Parsing file:///var/www/html/skorozvon/vendor/autoload.php
+Parsing file:///var/www/html/skorozvon/vendor/composer/autoload_files.php
+Parsing file:///var/www/html/skorozvon/vendor/composer/autoload_namespaces.php
+Parsing file:///var/www/html/skorozvon/vendor/composer/autoload_psr4.php
+Parsing file:///var/www/html/skorozvon/vendor/composer/autoload_real.php
+Parsing file:///var/www/html/skorozvon/vendor/composer/autoload_classmap.php
+[Info  - 17:53:38] Ignoring file file:///var/www/html/skorozvon/vendor/composer/autoload_classmap.php because it exceeds size limit of 150000 bytes (539040)
+Parsing file:///var/www/html/skorozvon/vendor/composer/ClassLoader.php
+Parsing file:///var/www/html/skorozvon/vendor/composer/autoload_static.php
+[Info  - 17:53:38] Ignoring file file:///var/www/html/skorozvon/vendor/composer/autoload_static.php because it exceeds size limit of 150000 bytes (595320)
+Parsing file:///var/www/html/skorozvon/app/Http/Controllers/Controller.php
+Parsing file:///var/www/html/skorozvon/app/Http/Controllers/PersonalArea/ContactsController.php
+Parsing file:///var/www/html/skorozvon/app/Http/Controllers/Auth/AuthController.php
+Parsing file:///var/www/html/skorozvon/app/Http/Kernel.php
+Parsing file:///var/www/html/skorozvon/app/Http/Middleware/Authenticate.php
+Parsing file:///var/www/html/skorozvon/app/Http/Middleware/TrustProxies.php
+Parsing file:///var/www/html/skorozvon/app/Http/Middleware/TrimStrings.php
+Parsing file:///var/www/html/skorozvon/app/Http/Middleware/CheckForMaintenanceMode.php
+Parsing file:///var/www/html/skorozvon/app/Http/Middleware/EncryptCookies.php
+Parsing file:///var/www/html/skorozvon/app/Http/Middleware/RedirectIfAuthenticated.php
+Parsing file:///var/www/html/skorozvon/app/Http/Middleware/VerifyCsrfToken.php
+Parsing file:///var/www/html/skorozvon/app/Repositories/LeadContacts.php
+Parsing file:///var/www/html/skorozvon/app/Exceptions/Handler.php
+Parsing file:///var/www/html/skorozvon/app/Models/Lead.php
+Parsing file:///var/www/html/skorozvon/app/Models/User.php
+Parsing file:///var/www/html/skorozvon/app/Providers/AuthServiceProvider.php
+Parsing file:///var/www/html/skorozvon/app/Providers/BroadcastServiceProvider.php
+Parsing file:///var/www/html/skorozvon/app/Providers/AppServiceProvider.php
+Parsing file:///var/www/html/skorozvon/app/Providers/RouteServiceProvider.php
+Parsing file:///var/www/html/skorozvon/app/Providers/EventServiceProvider.php
+Parsing file:///var/www/html/skorozvon/app/Console/Kernel.php
+Parsing file:///var/www/html/skorozvon/public/index.php
+Parsing file:///var/www/html/skorozvon/resources/lang/en/validation.php
+Parsing file:///var/www/html/skorozvon/resources/lang/en/pagination.php
+Parsing file:///var/www/html/skorozvon/resources/lang/en/auth.php
+Parsing file:///var/www/html/skorozvon/resources/lang/en/passwords.php
+Parsing file:///var/www/html/skorozvon/resources/views/welcome.blade.php
+Parsing file:///var/www/html/skorozvon/bootstrap/cache/services.php
+Parsing file:///var/www/html/skorozvon/bootstrap/cache/packages.php
+Parsing file:///var/www/html/skorozvon/bootstrap/app.php
+[Info  - 17:53:38] 97 Packages
+[Info  - 17:53:38] Restored psy/psysh:0.10.3 from cache
+[Info  - 17:53:38] Restored opis/closure:3.5.1 from cache
+[Info  - 17:53:38] Restored doctrine/instantiator:1.3.0 from cache
+[Info  - 17:53:38] Restored doctrine/inflector:1.3.1 from cache
+[Info  - 17:53:38] Restored doctrine/lexer:1.2.0 from cache
+[Info  - 17:53:38] Restored guzzlehttp/psr7:1.6.1 from cache
+[Info  - 17:53:39] Restored guzzlehttp/promises:1.3.1 from cache
+[Info  - 17:53:39] Restored guzzlehttp/guzzle:6.5.3 from cache
+[Info  - 17:53:39] Restored tijsverkoyen/css-to-inline-styles:2.2.2 from cache
+[Info  - 17:53:39] Restored fideloper/proxy:4.3.0 from cache
+[Info  - 17:53:39] Restored webmozart/assert:1.8.0 from cache
+[Info  - 17:53:39] Restored myclabs/deep-copy:1.9.5 from cache
+[Info  - 17:53:39] Restored namshi/jose:7.2.3 from cache
+[Info  - 17:53:39] Restored phpspec/prophecy:1.10.3 from cache
+[Info  - 17:53:39] Restored egulias/email-validator:2.1.17 from cache
+[Info  - 17:53:39] Restored phpunit/php-file-iterator:2.0.2 from cache
+[Info  - 17:53:39] Restored phpunit/php-token-stream:3.1.1 from cache
+[Info  - 17:53:40] Restored phpunit/phpunit:8.5.4 from cache
+[Info  - 17:53:40] Restored phpunit/php-timer:2.1.2 from cache
+[Info  - 17:53:40] Restored phpunit/php-text-template:1.2.1 from cache
+[Info  - 17:53:40] Restored phpunit/php-code-coverage:7.0.10 from cache
+[Info  - 17:53:40] Restored asm89/stack-cors:1.3.0 from cache
+[Info  - 17:53:40] Restored dragonmantank/cron-expression:2.3.0 from cache
+[Info  - 17:53:40] Restored symfony/polyfill-mbstring:1.15.0 from cache
+[Info  - 17:53:40] Restored symfony/polyfill-php72:1.15.0 from cache
+[Info  - 17:53:40] Restored symfony/service-contracts:2.0.1 from cache
+[Info  - 17:53:40] Restored symfony/polyfill-ctype:1.15.0 from cache
+[Info  - 17:53:41] Restored symfony/event-dispatcher:5.0.8 from cache
+[Info  - 17:53:41] Restored symfony/http-foundation:5.0.8 from cache
+[Info  - 17:53:41] Restored symfony/translation:5.0.8 from cache
+[Info  - 17:53:41] Restored symfony/polyfill-php56:1.15.0 from cache
+[Info  - 17:53:41] Restored symfony/process:5.0.8 from cache
+[Info  - 17:53:41] Restored symfony/polyfill-iconv:1.15.0 from cache
+[Info  - 17:53:42] Restored symfony/var-dumper:5.0.8 from cache
+[Info  - 17:53:42] Restored symfony/css-selector:5.0.8 from cache
+[Info  - 17:53:42] Restored symfony/console:5.0.8 from cache
+[Info  - 17:53:42] Restored symfony/polyfill-php73:1.15.0 from cache
+[Info  - 17:53:42] Restored symfony/http-kernel:5.0.8 from cache
+[Info  - 17:53:42] Restored symfony/translation-contracts:2.0.1 from cache
+[Info  - 17:53:42] Restored symfony/routing:5.0.8 from cache
+[Info  - 17:53:43] Restored symfony/error-handler:5.0.8 from cache
+[Info  - 17:53:43] Restored symfony/finder:5.0.8 from cache
+[Info  - 17:53:43] Restored symfony/mime:5.0.8 from cache
+[Info  - 17:53:43] Restored symfony/polyfill-intl-idn:1.15.0 from cache
+[Info  - 17:53:43] Restored symfony/polyfill-util:1.15.0 from cache
+[Info  - 17:53:43] Restored symfony/event-dispatcher-contracts:2.0.1 from cache
+[Info  - 17:53:43] Restored league/flysystem:1.0.67 from cache
+[Info  - 17:53:43] Restored league/commonmark:1.4.2 from cache
+[Info  - 17:53:43] Restored filp/whoops:2.7.1 from cache
+[Info  - 17:53:43] Restored lcobucci/jwt:3.3.1 from cache
+[Info  - 17:53:44] Restored scrivo/highlight.php:9.18.1.1 from cache
+[Info  - 17:53:44] Restored nunomaduro/collision:4.2.0 from cache
+[Info  - 17:53:44] Restored ramsey/collection:1.0.1 from cache
+[Info  - 17:53:44] Restored ramsey/uuid:4.0.1 from cache
+[Info  - 17:53:44] Restored facade/flare-client-php:1.3.2 from cache
+[Info  - 17:53:44] Restored facade/ignition-contracts:1.0.0 from cache
+[Info  - 17:53:44] Restored facade/ignition:2.0.2 from cache
+[Info  - 17:53:45] Restored monolog/monolog:2.0.2 from cache
+[Info  - 17:53:45] Restored vlucas/phpdotenv:4.1.5 from cache
+[Info  - 17:53:45] Restored theseer/tokenizer:1.1.3 from cache
+[Info  - 17:53:45] Restored tymon/jwt-auth:1.0.0 from cache
+[Info  - 17:53:48] Restored laravel/tinker:2.4.0 from cache
+[Info  - 17:53:49] Restored laravel/framework:7.9.2 from cache
+[Info  - 17:53:49] Restored nesbot/carbon:2.33.0 from cache
+[Info  - 17:53:49] Restored nikic/php-parser:4.4.0 from cache
+[Info  - 17:53:49] Restored voku/portable-ascii:1.4.10 from cache
+[Info  - 17:53:49] Restored mockery/mockery:1.3.1 from cache
+[Info  - 17:53:50] Restored fruitcake/laravel-cors:1.0.6 from cache
+[Info  - 17:53:50] Restored sebastian/code-unit-reverse-lookup:1.0.1 from cache
+[Info  - 17:53:50] Restored sebastian/type:1.1.3 from cache
+[Info  - 17:53:50] Restored sebastian/object-enumerator:3.0.3 from cache
+[Info  - 17:53:50] Restored sebastian/comparator:3.0.2 from cache
+[Info  - 17:53:50] Restored sebastian/recursion-context:3.0.0 from cache
+[Info  - 17:53:50] Restored sebastian/resource-operations:2.0.1 from cache
+[Info  - 17:53:50] Restored sebastian/diff:3.0.2 from cache
+[Info  - 17:53:50] Restored sebastian/global-state:3.0.0 from cache
+[Info  - 17:53:50] Restored sebastian/version:2.0.1 from cache
+[Info  - 17:53:50] Restored sebastian/object-reflector:1.1.1 from cache
+[Info  - 17:53:50] Restored sebastian/exporter:3.1.2 from cache
+[Info  - 17:53:50] Restored sebastian/environment:4.2.3 from cache
+[Info  - 17:53:50] Restored phpdocumentor/type-resolver:1.1.0 from cache
+[Info  - 17:53:51] Restored phpdocumentor/reflection-common:2.1.0 from cache
+[Info  - 17:53:51] Restored phpdocumentor/reflection-docblock:5.1.0 from cache
+[Info  - 17:53:51] Restored ralouphie/getallheaders:3.0.3 from cache
+[Info  - 17:53:51] Restored phpoption/phpoption:1.7.3 from cache
+[Info  - 17:53:51] Restored fzaninotto/faker:1.9.1 from cache
+[Info  - 17:53:51] Restored psr/http-message:1.0.1 from cache
+[Info  - 17:53:51] Restored psr/event-dispatcher:1.0.0 from cache
+[Info  - 17:53:51] Restored psr/simple-cache:1.0.1 from cache
+[Info  - 17:53:51] Restored psr/log:1.1.3 from cache
+[Info  - 17:53:52] Restored psr/container:1.0.0 from cache
+[Info  - 17:53:52] Restored brick/math:0.8.15 from cache
+[Info  - 17:53:53] Restored hamcrest/hamcrest-php:2.0.0 from cache
+[Info  - 17:53:54] Restored swiftmailer/swiftmailer:6.2.3 from cache
+[Info  - 17:53:54] Restored dnoegel/php-xdg-base-dir:0.1.1 from cache
+[Info  - 17:53:54] Restored phar-io/manifest:1.0.3 from cache
+[Info  - 17:53:54] Restored phar-io/version:2.0.1 from cache
+[Info  - 17:53:54] All 6540 PHP files parsed in 16 seconds. 448 MiB allocated.
