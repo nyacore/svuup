@@ -19,7 +19,7 @@ class LeadContacts extends Controller
     }
 
     public function getCreateLeadContact($data):object
-    { dd(1);
+    { 
         $contact = new Lead();
         $contact['user_id'] = $data['user_id'];
         $contact['name']    = $data['name'];
@@ -49,7 +49,24 @@ class LeadContacts extends Controller
         $this->getLeadById($id)->delete();
     }
 
-    public function getUpdateLeadContact(int $id, Request $request){
-        
+    public function getUpdateLeadContact(Request $request, int $id)
+    {
+        $obj = $this->getLeadById($id);
+        $obj['user_id'] = $request['user_id'];
+        $obj['name']    = $request['name'];
+        $obj['phones']  = $request['phones'];
+        $obj['emails']  = $request['emails'];
+        $obj['sites']   = $request['sites'];
+        $obj['city']    = $request['city'];
+        $obj['street']  = $request['street'];
+        $obj['region']  = $request['region'];
+        $obj['activity']= $request['activity'];
+        $obj['INN']     = $request['INN'];
+        $obj['KPP']     = $request['KPP'];
+        $obj['tags']    = $request['tags'];
+        $obj['desc']    = $request['desc'];
+        $obj['responsible']= $request['responsible'];
+        $obj->update();
+        return $obj;   
     } 
 }

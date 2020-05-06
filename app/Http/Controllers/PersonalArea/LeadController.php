@@ -35,7 +35,7 @@ class LeadController extends Controller
      */
     public function create()
     {
-        return response()->json($this->auth->me(),200);
+        // return $this->auth->me();
     }
 
 
@@ -82,9 +82,7 @@ class LeadController extends Controller
      */
     public function update(Request $request,int $id)
     {   
-        $obj = $this->rep->getLeadById($id);
-        $obj = $this->rep->deleteLeadById($id);
-        return response()->json($this->rep->getLeadById($id),200);
+        return response()->json($this->getUpdateLeadContact($request, $id),200);
     }
 
     /**
