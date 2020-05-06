@@ -561,3 +561,22 @@ Open repository: /var/www/html/skorozvon
 > git show :app/Http/Controllers/PersonalArea/LeadController.php
 > git ls-files --stage -- /var/www/html/skorozvon/app/Http/Controllers/PersonalArea/LeadController.php
 > git cat-file -s f9ab74b7bdd617e2f92c8c13bd71f9f2222bf418
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git ls-files --stage -- /var/www/html/skorozvon/app/Http/Controllers/PersonalArea/LeadController.php
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git cat-file -s 6984681fb76706e319be17ed712296f0f421f671
+> git config --get commit.template
+> git show :app/Http/Controllers/PersonalArea/LeadController.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
