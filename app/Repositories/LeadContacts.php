@@ -3,6 +3,7 @@
 namespace App\Repositories;
 
 use App\Models\Lead;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 
@@ -49,7 +50,7 @@ class LeadContacts extends Controller
         $this->getLeadById($id)->delete();
     }
 
-    public function getUpdateLeadContact(Request $request, int $id)
+    public function getUpdateLeadContact(Request $request, int $id):object
     {
         $obj = $this->getLeadById($id);
         $obj['user_id'] = $request['user_id'];

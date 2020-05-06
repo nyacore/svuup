@@ -81,8 +81,8 @@ class LeadController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request,int $id)
-    {   
-        return response()->json($this->getUpdateLeadContact($request, $id),200);
+    {   $obj =$this->rep->getUpdateLeadContact($request, $id);
+        return response()->json($obj,200);
     }
 
     /**
@@ -94,5 +94,6 @@ class LeadController extends Controller
     public function destroy($id)
     {
      $this->rep->destroyLeadById($id);
+    return response()->json([],410);
     }
 }
