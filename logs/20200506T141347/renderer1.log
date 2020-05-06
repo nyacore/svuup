@@ -1,0 +1,8 @@
+[2020-05-06 14:13:59.604] [renderer1] [error] Error: Unable to read file '/var/www/html/skorozvon/database/migrations/2020_05_04_155029_create_leads_contact_table.php' (Error: Unable to resolve non-existing file '/var/www/html/skorozvon/database/migrations/2020_05_04_155029_create_leads_contact_table.php')
+    at Object.t.createErrorWithActions (file:///usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:53:573)
+    at e.handleSetInputError (file:///usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:5422:601)
+    at e.handleSetInputError (file:///usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:5425:428)
+    at e.setInput (file:///usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:5422:317)
+[2020-05-06 14:14:09.553] [renderer1] [error] Error: [File Watcher (chokidar)] Inotify limit reached (ENOSPC)
+[2020-05-06 14:14:09.565] [renderer1] [error] [File Watcher (chokidar)] Inotify limit reached (ENOSPC)
+[2020-05-06 14:14:13.890] [renderer1] [warning] UNRESPONSIVE extension host, 'vscode.emmet' took 100% of 345.686ms, saved PROFILE here: '/tmp/exthost-382d68.cpuprofile' [{"id":"self","total":154,"percentage":0},{"id":"vscode.emmet","total":343988,"percentage":100},{"id":"vscode.git","total":1450,"percentage":0}]

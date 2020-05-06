@@ -83,8 +83,8 @@ class LeadController extends Controller
     public function update(Request $request,int $id)
     {   
         $obj = $this->rep->getLeadById($id);
-        $obj = $this->rep->
-        return response()->json([], 200);
+        $obj = $this->rep->deleteLeadById($id);
+        return response()->json($this->rep->getLeadById($id),200);
     }
 
     /**

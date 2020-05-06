@@ -1,0 +1,563 @@
+Looking for git in: git
+Using git 2.17.1 from git
+> git rev-parse --show-toplevel
+> git rev-parse --git-dir
+Open repository: /var/www/html/skorozvon
+> git status -z -u
+> git show :app/Http/Controllers/PersonalArea/LeadController.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Http/Controllers/PersonalArea/LeadController.php
+> git cat-file -s f9ab74b7bdd617e2f92c8c13bd71f9f2222bf418
+> git check-ignore -v -z --stdin
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show :database/migrations/2020_05_05_131857_create_task_table.php
+> git ls-files --stage -- /var/www/html/skorozvon/database/migrations/2020_05_05_131857_create_task_table.php
+> git cat-file -s ba4d4c8b5f49af58f00b972e7da7c1f8cdc97a71
+> git show :database/migrations/2020_05_05_141356_create_leads_table.php
+> git ls-files --stage -- /var/www/html/skorozvon/database/migrations/2020_05_05_141356_create_leads_table.php
+> git cat-file -s 2258b62d8333dba4b8f8eca915a36479e2d18e21
+> git show :database/migrations/2020_05_05_131857_create_task_table.php
+> git ls-files --stage -- /var/www/html/skorozvon/database/migrations/2020_05_05_131857_create_task_table.php
+> git cat-file -s ba4d4c8b5f49af58f00b972e7da7c1f8cdc97a71
+> git show :database/migrations/2020_05_05_141356_create_leads_table.php
+> git ls-files --stage -- /var/www/html/skorozvon/database/migrations/2020_05_05_141356_create_leads_table.php
+> git cat-file -s 2258b62d8333dba4b8f8eca915a36479e2d18e21
+> git show :database/migrations/2020_05_05_131857_create_task_table.php
+> git ls-files --stage -- /var/www/html/skorozvon/database/migrations/2020_05_05_131857_create_task_table.php
+> git cat-file -s ba4d4c8b5f49af58f00b972e7da7c1f8cdc97a71
+> git show :app/Http/Controllers/PersonalArea/LeadController.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Http/Controllers/PersonalArea/LeadController.php
+> git cat-file -s f9ab74b7bdd617e2f92c8c13bd71f9f2222bf418
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git show :database/migrations/2020_05_06_145826_create_tasks_table.php
+> git ls-files --stage -- /var/www/html/skorozvon/database/migrations/2020_05_06_145826_create_tasks_table.php
+> git show :app/Http/Controllers/PersonalArea/LeadController.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Http/Controllers/PersonalArea/LeadController.php
+> git cat-file -s f9ab74b7bdd617e2f92c8c13bd71f9f2222bf418
+> git show :app/Http/Controllers/PersonalArea/ContactsController.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Http/Controllers/PersonalArea/ContactsController.php
+> git cat-file -s 8751c673f505c07c4f127666881b3aa2adf069f2
+> git show :app/Http/Controllers/PersonalArea/LeadController.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Http/Controllers/PersonalArea/LeadController.php
+> git cat-file -s f9ab74b7bdd617e2f92c8c13bd71f9f2222bf418
+> git show :database/migrations/2020_05_06_145826_create_tasks_table.php
+> git ls-files --stage -- /var/www/html/skorozvon/database/migrations/2020_05_06_145826_create_tasks_table.php
+> git show :database/migrations/2020_05_05_141356_create_leads_table.php
+> git ls-files --stage -- /var/www/html/skorozvon/database/migrations/2020_05_05_141356_create_leads_table.php
+> git cat-file -s 2258b62d8333dba4b8f8eca915a36479e2d18e21
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show :app/Http/Controllers/PersonalArea/LeadController.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Http/Controllers/PersonalArea/LeadController.php
+> git cat-file -s f9ab74b7bdd617e2f92c8c13bd71f9f2222bf418
+> git check-ignore -v -z --stdin
+> git show :app/Http/Controllers/PersonalArea/TaskController.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Http/Controllers/PersonalArea/TaskController.php
+> git show :app/Http/Controllers/PersonalArea/LeadController.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Http/Controllers/PersonalArea/LeadController.php
+> git cat-file -s f9ab74b7bdd617e2f92c8c13bd71f9f2222bf418
+> git show :app/Http/Controllers/PersonalArea/TaskController.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Http/Controllers/PersonalArea/TaskController.php
+> git show :app/Http/Controllers/PersonalArea/LeadController.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Http/Controllers/PersonalArea/LeadController.php
+> git cat-file -s f9ab74b7bdd617e2f92c8c13bd71f9f2222bf418
+> git show :app/Http/Controllers/PersonalArea/TaskController.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Http/Controllers/PersonalArea/TaskController.php
+> git show :app/Http/Controllers/PersonalArea/LeadController.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Http/Controllers/PersonalArea/LeadController.php
+> git cat-file -s f9ab74b7bdd617e2f92c8c13bd71f9f2222bf418
+> git show :app/Http/Controllers/Auth/AuthController.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Http/Controllers/Auth/AuthController.php
+> git cat-file -s 125e1279c3673aa3b89fb94816fae667ddf9f5a9
+> git show :app/Http/Controllers/PersonalArea/LeadController.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Http/Controllers/PersonalArea/LeadController.php
+> git cat-file -s f9ab74b7bdd617e2f92c8c13bd71f9f2222bf418
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show :app/Repositories/LeadContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/LeadContacts.php
+> git cat-file -s 95d593df40991c009b426b78dfb99b9db49d646c
+> git check-ignore -v -z --stdin
+> git show :app/Models/Lead.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Lead.php
+> git cat-file -s abb29d16818a5d1023d085329769ac7c12128e11
+> git check-ignore -v -z --stdin
+> git show :database/migrations/2020_05_06_145826_create_tasks_table.php
+> git ls-files --stage -- /var/www/html/skorozvon/database/migrations/2020_05_06_145826_create_tasks_table.php
+> git show :app/Repositories/TaskContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/TaskContacts.php
+> git check-ignore -v -z --stdin
+> git show :app/Repositories/LeadContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/LeadContacts.php
+> git cat-file -s 95d593df40991c009b426b78dfb99b9db49d646c
+> git show :app/Repositories/TaskContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/TaskContacts.php
+> git show :app/Repositories/LeadContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/LeadContacts.php
+> git cat-file -s 95d593df40991c009b426b78dfb99b9db49d646c
+> git show :app/Repositories/TaskContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/TaskContacts.php
+> git show :database/migrations/2020_05_06_145826_create_tasks_table.php
+> git ls-files --stage -- /var/www/html/skorozvon/database/migrations/2020_05_06_145826_create_tasks_table.php
+> git show :app/Repositories/TaskContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/TaskContacts.php
+> git show :app/Models/Lead.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Lead.php
+> git cat-file -s abb29d16818a5d1023d085329769ac7c12128e11
+> git show :app/Models/User.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/User.php
+> git cat-file -s 6fd91c40e786138e6ffdb187d39c406750447604
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show :app/Models/Task.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Task.php
+> git show :app/Models/User.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/User.php
+> git cat-file -s 6fd91c40e786138e6ffdb187d39c406750447604
+> git show :app/Models/Lead.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Lead.php
+> git cat-file -s abb29d16818a5d1023d085329769ac7c12128e11
+> git show :app/Models/Task.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Task.php
+> git show :app/Models/Lead.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Lead.php
+> git cat-file -s abb29d16818a5d1023d085329769ac7c12128e11
+> git show :app/Models/Task.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Task.php
+> git show :app/Models/Lead.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Lead.php
+> git cat-file -s abb29d16818a5d1023d085329769ac7c12128e11
+> git show :app/Models/Task.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Task.php
+> git show :app/Models/Lead.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Lead.php
+> git cat-file -s abb29d16818a5d1023d085329769ac7c12128e11
+> git show :app/Models/Task.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Task.php
+> git show :app/Models/Lead.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Lead.php
+> git cat-file -s abb29d16818a5d1023d085329769ac7c12128e11
+> git show :app/Models/Task.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Task.php
+> git show :app/Models/Lead.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Lead.php
+> git cat-file -s abb29d16818a5d1023d085329769ac7c12128e11
+> git show :app/Models/Task.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Task.php
+> git show :app/Models/Lead.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Lead.php
+> git cat-file -s abb29d16818a5d1023d085329769ac7c12128e11
+> git show :app/Models/Task.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Task.php
+> git show :app/Models/Lead.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Lead.php
+> git cat-file -s abb29d16818a5d1023d085329769ac7c12128e11
+> git show :app/Models/Task.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Task.php
+> git show :database/migrations/2020_05_05_141356_create_leads_table.php
+> git ls-files --stage -- /var/www/html/skorozvon/database/migrations/2020_05_05_141356_create_leads_table.php
+> git cat-file -s 2258b62d8333dba4b8f8eca915a36479e2d18e21
+> git show :database/migrations/2014_10_12_000000_create_users_table.php
+> git ls-files --stage -- /var/www/html/skorozvon/database/migrations/2014_10_12_000000_create_users_table.php
+> git cat-file -s 621a24eb734b76ca474bb8b5ea4a62b5f27d223c
+> git show :database/migrations/2020_05_05_141356_create_leads_table.php
+> git ls-files --stage -- /var/www/html/skorozvon/database/migrations/2020_05_05_141356_create_leads_table.php
+> git cat-file -s 2258b62d8333dba4b8f8eca915a36479e2d18e21
+> git show :database/migrations/2020_05_06_145826_create_tasks_table.php
+> git ls-files --stage -- /var/www/html/skorozvon/database/migrations/2020_05_06_145826_create_tasks_table.php
+> git show :database/migrations/2020_05_05_141356_create_leads_table.php
+> git ls-files --stage -- /var/www/html/skorozvon/database/migrations/2020_05_05_141356_create_leads_table.php
+> git cat-file -s 2258b62d8333dba4b8f8eca915a36479e2d18e21
+> git show :app/Models/Task.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Task.php
+> git show :app/Models/Lead.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Lead.php
+> git cat-file -s abb29d16818a5d1023d085329769ac7c12128e11
+> git show :app/Models/Task.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Task.php
+> git show :app/Models/Lead.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Lead.php
+> git cat-file -s abb29d16818a5d1023d085329769ac7c12128e11
+> git show :app/Models/Task.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Task.php
+> git show :app/Models/Lead.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Lead.php
+> git cat-file -s abb29d16818a5d1023d085329769ac7c12128e11
+> git show :app/Models/Task.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Task.php
+> git show :app/Models/Lead.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Lead.php
+> git cat-file -s abb29d16818a5d1023d085329769ac7c12128e11
+> git show :database/migrations/2020_05_05_141356_create_leads_table.php
+> git ls-files --stage -- /var/www/html/skorozvon/database/migrations/2020_05_05_141356_create_leads_table.php
+> git cat-file -s 2258b62d8333dba4b8f8eca915a36479e2d18e21
+> git show :app/Repositories/LeadContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/LeadContacts.php
+> git cat-file -s 95d593df40991c009b426b78dfb99b9db49d646c
+> git show :app/Models/Lead.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Lead.php
+> git cat-file -s abb29d16818a5d1023d085329769ac7c12128e11
+> git show :database/migrations/2020_05_05_141356_create_leads_table.php
+> git ls-files --stage -- /var/www/html/skorozvon/database/migrations/2020_05_05_141356_create_leads_table.php
+> git cat-file -s 2258b62d8333dba4b8f8eca915a36479e2d18e21
+> git show :database/migrations/2020_05_06_145826_create_tasks_table.php
+> git ls-files --stage -- /var/www/html/skorozvon/database/migrations/2020_05_06_145826_create_tasks_table.php
+> git show :app/Models/Task.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Task.php
+> git show :database/migrations/2020_05_06_145826_create_tasks_table.php
+> git ls-files --stage -- /var/www/html/skorozvon/database/migrations/2020_05_06_145826_create_tasks_table.php
+> git show :app/Models/Task.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Task.php
+> git show :app/Models/Lead.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Lead.php
+> git cat-file -s abb29d16818a5d1023d085329769ac7c12128e11
+> git show :app/Models/Task.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Task.php
+> git show :app/Models/Lead.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Lead.php
+> git cat-file -s abb29d16818a5d1023d085329769ac7c12128e11
+> git show :app/Models/Task.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Task.php
+> git show :app/Models/Lead.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Lead.php
+> git cat-file -s abb29d16818a5d1023d085329769ac7c12128e11
+> git show :app/Models/Task.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Task.php
+> git show :app/Models/Lead.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Lead.php
+> git cat-file -s abb29d16818a5d1023d085329769ac7c12128e11
+> git show :app/Models/Task.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Task.php
+> git show :app/Models/Lead.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Lead.php
+> git cat-file -s abb29d16818a5d1023d085329769ac7c12128e11
+> git show :app/Models/Task.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Task.php
+> git show :app/Models/Lead.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Lead.php
+> git cat-file -s abb29d16818a5d1023d085329769ac7c12128e11
+> git show :app/Models/Task.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Task.php
+> git show :app/Models/Lead.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Lead.php
+> git cat-file -s abb29d16818a5d1023d085329769ac7c12128e11
+> git show :app/Models/Task.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Task.php
+> git show :app/Models/Lead.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Lead.php
+> git cat-file -s abb29d16818a5d1023d085329769ac7c12128e11
+> git show :app/Models/Task.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Task.php
+> git show :app/Models/Lead.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Lead.php
+> git cat-file -s abb29d16818a5d1023d085329769ac7c12128e11
+> git show :app/Models/Task.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Task.php
+> git show :app/Repositories/LeadContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/LeadContacts.php
+> git cat-file -s 95d593df40991c009b426b78dfb99b9db49d646c
+> git show :app/Repositories/TaskContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/TaskContacts.php
+> git show :app/Repositories/LeadContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/LeadContacts.php
+> git cat-file -s 95d593df40991c009b426b78dfb99b9db49d646c
+> git show :app/Repositories/TaskContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/TaskContacts.php
+> git show :app/Repositories/LeadContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/LeadContacts.php
+> git cat-file -s 95d593df40991c009b426b78dfb99b9db49d646c
+> git show :app/Repositories/TaskContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/TaskContacts.php
+> git show :app/Repositories/LeadContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/LeadContacts.php
+> git cat-file -s 95d593df40991c009b426b78dfb99b9db49d646c
+> git show :app/Repositories/TaskContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/TaskContacts.php
+> git show :app/Models/Task.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Task.php
+> git show :app/Repositories/TaskContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/TaskContacts.php
+> git show :app/Repositories/LeadContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/LeadContacts.php
+> git cat-file -s 95d593df40991c009b426b78dfb99b9db49d646c
+> git show :app/Repositories/TaskContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/TaskContacts.php
+> git show :app/Models/Task.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Task.php
+> git show :app/Repositories/TaskContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/TaskContacts.php
+> git show :app/Models/Task.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Task.php
+> git show :app/Repositories/TaskContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/TaskContacts.php
+> git show :app/Models/Lead.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Lead.php
+> git cat-file -s abb29d16818a5d1023d085329769ac7c12128e11
+> git show :app/Repositories/LeadContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/LeadContacts.php
+> git cat-file -s 95d593df40991c009b426b78dfb99b9db49d646c
+> git show :app/Models/Lead.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Lead.php
+> git cat-file -s abb29d16818a5d1023d085329769ac7c12128e11
+> git show :app/Repositories/LeadContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/LeadContacts.php
+> git cat-file -s 95d593df40991c009b426b78dfb99b9db49d646c
+> git show :app/Models/Lead.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Lead.php
+> git cat-file -s abb29d16818a5d1023d085329769ac7c12128e11
+> git show :app/Repositories/LeadContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/LeadContacts.php
+> git cat-file -s 95d593df40991c009b426b78dfb99b9db49d646c
+> git show :app/Repositories/TaskContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/TaskContacts.php
+> git show :app/Models/Task.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Task.php
+> git show :app/Models/Lead.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Lead.php
+> git cat-file -s abb29d16818a5d1023d085329769ac7c12128e11
+> git show :app/Models/Task.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Task.php
+> git show :app/Repositories/TaskContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/TaskContacts.php
+> git show :app/Models/Task.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Task.php
+> git show :app/Repositories/TaskContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/TaskContacts.php
+> git show :app/Models/Task.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Task.php
+> git show :app/Repositories/TaskContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/TaskContacts.php
+> git show :app/Models/Task.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Task.php
+> git show :app/Repositories/TaskContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/TaskContacts.php
+> git show :app/Models/Task.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Task.php
+> git show :app/Repositories/TaskContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/TaskContacts.php
+> git show :app/Models/Task.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Task.php
+> git show :app/Repositories/TaskContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/TaskContacts.php
+> git show :app/Models/Task.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Task.php
+> git show :app/Repositories/TaskContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/TaskContacts.php
+> git show :app/Models/Task.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Task.php
+> git show :app/Repositories/TaskContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/TaskContacts.php
+> git show :app/Models/Task.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Task.php
+> git show :app/Repositories/TaskContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/TaskContacts.php
+> git show :app/Models/Task.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Task.php
+> git show :app/Repositories/TaskContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/TaskContacts.php
+> git show :app/Models/Task.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Task.php
+> git show :app/Repositories/TaskContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/TaskContacts.php
+> git show :app/Models/Task.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Task.php
+> git show :app/Repositories/TaskContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/TaskContacts.php
+> git show :app/Http/Controllers/PersonalArea/LeadController.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Http/Controllers/PersonalArea/LeadController.php
+> git cat-file -s f9ab74b7bdd617e2f92c8c13bd71f9f2222bf418
+> git show :app/Repositories/TaskContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/TaskContacts.php
+> git show :app/Repositories/LeadContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/LeadContacts.php
+> git cat-file -s 95d593df40991c009b426b78dfb99b9db49d646c
+> git show :app/Models/Lead.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Lead.php
+> git cat-file -s abb29d16818a5d1023d085329769ac7c12128e11
+> git show :app/Repositories/LeadContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/LeadContacts.php
+> git cat-file -s 95d593df40991c009b426b78dfb99b9db49d646c
+> git show :app/Repositories/TaskContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/TaskContacts.php
+> git show :app/Repositories/LeadContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/LeadContacts.php
+> git cat-file -s 95d593df40991c009b426b78dfb99b9db49d646c
+> git show :app/Repositories/TaskContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/TaskContacts.php
+> git show :app/Repositories/LeadContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/LeadContacts.php
+> git cat-file -s 95d593df40991c009b426b78dfb99b9db49d646c
+> git show :app/Repositories/TaskContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/TaskContacts.php
+> git show :app/Repositories/LeadContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/LeadContacts.php
+> git cat-file -s 95d593df40991c009b426b78dfb99b9db49d646c
+> git show :app/Repositories/TaskContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/TaskContacts.php
+> git show :app/Repositories/LeadContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/LeadContacts.php
+> git cat-file -s 95d593df40991c009b426b78dfb99b9db49d646c
+> git show :app/Repositories/TaskContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/TaskContacts.php
+> git show :app/Repositories/LeadContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/LeadContacts.php
+> git cat-file -s 95d593df40991c009b426b78dfb99b9db49d646c
+> git show :app/Repositories/TaskContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/TaskContacts.php
+> git show :app/Repositories/LeadContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/LeadContacts.php
+> git cat-file -s 95d593df40991c009b426b78dfb99b9db49d646c
+> git show :app/Repositories/TaskContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/TaskContacts.php
+> git show :app/Repositories/LeadContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/LeadContacts.php
+> git cat-file -s 95d593df40991c009b426b78dfb99b9db49d646c
+> git show :app/Repositories/TaskContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/TaskContacts.php
+> git show :app/Http/Controllers/PersonalArea/LeadController.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Http/Controllers/PersonalArea/LeadController.php
+> git cat-file -s f9ab74b7bdd617e2f92c8c13bd71f9f2222bf418
+> git show :app/Http/Controllers/PersonalArea/TaskController.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Http/Controllers/PersonalArea/TaskController.php
+> git show :app/Http/Controllers/PersonalArea/LeadController.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Http/Controllers/PersonalArea/LeadController.php
+> git cat-file -s f9ab74b7bdd617e2f92c8c13bd71f9f2222bf418
+> git show :app/Http/Controllers/PersonalArea/TaskController.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Http/Controllers/PersonalArea/TaskController.php
+> git show :app/Http/Controllers/PersonalArea/LeadController.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Http/Controllers/PersonalArea/LeadController.php
+> git cat-file -s f9ab74b7bdd617e2f92c8c13bd71f9f2222bf418
+> git show :app/Http/Controllers/PersonalArea/TaskController.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Http/Controllers/PersonalArea/TaskController.php
+> git show :app/Http/Controllers/PersonalArea/LeadController.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Http/Controllers/PersonalArea/LeadController.php
+> git cat-file -s f9ab74b7bdd617e2f92c8c13bd71f9f2222bf418
+> git show :app/Http/Controllers/PersonalArea/TaskController.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Http/Controllers/PersonalArea/TaskController.php
+> git show :app/Http/Controllers/PersonalArea/LeadController.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Http/Controllers/PersonalArea/LeadController.php
+> git cat-file -s f9ab74b7bdd617e2f92c8c13bd71f9f2222bf418
+> git show :app/Http/Controllers/PersonalArea/TaskController.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Http/Controllers/PersonalArea/TaskController.php
+> git show :app/Http/Controllers/PersonalArea/LeadController.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Http/Controllers/PersonalArea/LeadController.php
+> git cat-file -s f9ab74b7bdd617e2f92c8c13bd71f9f2222bf418
+> git show :app/Repositories/TaskContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/TaskContacts.php
+> git show :app/Models/Task.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Task.php
+> git show :app/Repositories/TaskContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/TaskContacts.php
+> git show :app/Http/Controllers/PersonalArea/TaskController.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Http/Controllers/PersonalArea/TaskController.php
+> git show :app/Http/Controllers/PersonalArea/LeadController.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Http/Controllers/PersonalArea/LeadController.php
+> git cat-file -s f9ab74b7bdd617e2f92c8c13bd71f9f2222bf418
+> git show :app/Repositories/LeadContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/LeadContacts.php
+> git cat-file -s 95d593df40991c009b426b78dfb99b9db49d646c
+> git show :app/Models/Lead.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Lead.php
+> git cat-file -s abb29d16818a5d1023d085329769ac7c12128e11
+> git show :app/Http/Controllers/PersonalArea/LeadController.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Http/Controllers/PersonalArea/LeadController.php
+> git cat-file -s f9ab74b7bdd617e2f92c8c13bd71f9f2222bf418
+> git show :app/Models/Lead.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Lead.php
+> git cat-file -s abb29d16818a5d1023d085329769ac7c12128e11
+> git show :app/Http/Controllers/PersonalArea/LeadController.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Http/Controllers/PersonalArea/LeadController.php
+> git cat-file -s f9ab74b7bdd617e2f92c8c13bd71f9f2222bf418
+> git show :app/Repositories/LeadContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/LeadContacts.php
+> git cat-file -s 95d593df40991c009b426b78dfb99b9db49d646c
+> git show :app/Http/Controllers/PersonalArea/LeadController.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Http/Controllers/PersonalArea/LeadController.php
+> git cat-file -s f9ab74b7bdd617e2f92c8c13bd71f9f2222bf418
+> git show :app/Repositories/TaskContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/TaskContacts.php
+> git show :app/Repositories/LeadContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/LeadContacts.php
+> git cat-file -s 95d593df40991c009b426b78dfb99b9db49d646c
+> git show :app/Http/Controllers/PersonalArea/LeadController.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Http/Controllers/PersonalArea/LeadController.php
+> git cat-file -s f9ab74b7bdd617e2f92c8c13bd71f9f2222bf418
+> git show :app/Repositories/LeadContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/LeadContacts.php
+> git cat-file -s 95d593df40991c009b426b78dfb99b9db49d646c
+> git show :app/Http/Controllers/PersonalArea/LeadController.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Http/Controllers/PersonalArea/LeadController.php
+> git cat-file -s f9ab74b7bdd617e2f92c8c13bd71f9f2222bf418
+> git show :app/Repositories/LeadContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/LeadContacts.php
+> git cat-file -s 95d593df40991c009b426b78dfb99b9db49d646c
+> git show :app/Http/Controllers/PersonalArea/LeadController.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Http/Controllers/PersonalArea/LeadController.php
+> git cat-file -s f9ab74b7bdd617e2f92c8c13bd71f9f2222bf418
+> git show :app/Http/Controllers/Auth/AuthController.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Http/Controllers/Auth/AuthController.php
+> git cat-file -s 125e1279c3673aa3b89fb94816fae667ddf9f5a9
+> git show :app/Http/Controllers/PersonalArea/LeadController.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Http/Controllers/PersonalArea/LeadController.php
+> git cat-file -s f9ab74b7bdd617e2f92c8c13bd71f9f2222bf418
+> git show :app/Http/Controllers/PersonalArea/TaskController.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Http/Controllers/PersonalArea/TaskController.php
+> git show :app/Models/Lead.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Lead.php
+> git cat-file -s abb29d16818a5d1023d085329769ac7c12128e11
+> git show :app/Repositories/LeadContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/LeadContacts.php
+> git cat-file -s 95d593df40991c009b426b78dfb99b9db49d646c
+> git show :app/Repositories/TaskContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/TaskContacts.php
+> git show :app/Http/Controllers/PersonalArea/TaskController.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Http/Controllers/PersonalArea/TaskController.php
+> git show :app/Models/Task.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Task.php
+> git show :app/Models/Lead.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Lead.php
+> git cat-file -s abb29d16818a5d1023d085329769ac7c12128e11
+> git show :app/Repositories/LeadContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/LeadContacts.php
+> git cat-file -s 95d593df40991c009b426b78dfb99b9db49d646c
+> git show :app/Repositories/TaskContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/TaskContacts.php
+> git show :app/Http/Controllers/PersonalArea/TaskController.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Http/Controllers/PersonalArea/TaskController.php
+> git show :app/Repositories/TaskContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/TaskContacts.php
+> git show :app/Http/Controllers/PersonalArea/TaskController.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Http/Controllers/PersonalArea/TaskController.php
+> git show :app/Models/Task.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Models/Task.php
+> git show :app/Repositories/TaskContacts.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Repositories/TaskContacts.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :app/Http/Controllers/PersonalArea/LeadController.php
+> git ls-files --stage -- /var/www/html/skorozvon/app/Http/Controllers/PersonalArea/LeadController.php
+> git cat-file -s f9ab74b7bdd617e2f92c8c13bd71f9f2222bf418

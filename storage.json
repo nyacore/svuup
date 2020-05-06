@@ -106,7 +106,8 @@
                     },
                     {
                         "id": "workbench.action.toggleAutoSave",
-                        "label": "A&&uto Save"
+                        "label": "A&&uto Save",
+                        "checked": true
                     },
                     {
                         "id": "",
@@ -1454,7 +1455,7 @@
             "uiState": {
                 "mode": 0,
                 "x": 288,
-                "y": 126,
+                "y": 132,
                 "width": 1024,
                 "height": 768
             }
