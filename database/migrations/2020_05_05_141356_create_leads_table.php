@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateLeadTable extends Migration
+class CreateLeadsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateLeadTable extends Migration
      */
     public function up()
     {
-        Schema::create('lead', function (Blueprint $table) {
+        Schema::create('leads', function (Blueprint $table) {
             $table->id();
             $table->string('user_id'); // Id пользователя
             $table->string('name'); // Имя
@@ -29,7 +29,6 @@ class CreateLeadTable extends Migration
             $table->string('tags'); // Тэги
             $table->text('desc'); // Описание
             $table->string('responsible'); // Ответсвенное лицо
-            $table->boolean('main')->default(false); // Главный контакт
             $table->timestamps();
         });
     }
@@ -41,6 +40,6 @@ class CreateLeadTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('lead');
+        Schema::dropIfExists('leads');
     }
 }

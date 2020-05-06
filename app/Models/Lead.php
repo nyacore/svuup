@@ -31,6 +31,8 @@ class Lead extends Model
             'main', // Главный контакт
     ];
 
+    protected $table = 'leads';
+
     // public function __construct()
     // {
     //      DB::table('leads_contact');
