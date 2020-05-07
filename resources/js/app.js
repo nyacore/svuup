@@ -10,6 +10,7 @@ window.Vue = require('vue');
 window.VueRouter = require('vue-router').default;
 window.vuetify = require('./plugins/vuetify').default;
 window.Vuex = require('vuex').default;
+window.VueToast = require('vue-toast-notification');
 
 /**
  * The following block of code may be used to automatically register your
@@ -26,12 +27,12 @@ Vue.component('app', require('./components/App.vue').default);
 
 Vue.use(VueRouter);
 Vue.use(Vuex);
-
+Vue.use(VueToast, {
+    position: 'top'
+});
 
 const router = require('./routes').default;
 const store = require('./store').default;
-
-console.log(router);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

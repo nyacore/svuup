@@ -1,3 +1,5 @@
+import 'vue-toast-notification/dist/theme-default.css';
+
 window._ = require('lodash');
 
 /**

@@ -6,9 +6,14 @@ import Leads from '../components/Leads';
 const router = new VueRouter({
     routes: [
         {
+            path: '/',
+            name: 'home',
+            component: Leads
+        },
+        {
             path: '/leads',
             name: 'dashboard',
-            component: Leads
+            component: Leads,
         },
         {
             path: '/login',
@@ -18,10 +23,12 @@ const router = new VueRouter({
     ]
 });
 
-// router.beforeEach((to, from, next) => {
-//     if (!window.localStorage.getItem('api_token') && from.name !== 'login') {
-//         next({ name: 'login' });
-//     }
-// });
+router.beforeEach((to, from, next) => {
+    if (!window.localStorage.getItem('api_token') && to.name !== 'login') {
+        next({ name: 'login' });
+    } else {
+        next();
+    }
+});
 
 export default router;

@@ -1,18 +1,15 @@
 export default {
     state: () => ({
         isLoggedIn: !!localStorage.getItem('api_token'),
-        user: {
-
-        }
+        user: {}
     }),
 
     mutations: {
-        LOGIN(state, user) {
+        LOGIN(state) {
             state.isLoggedIn = true;
-
-            state.user = user;
         },
         LOGOUT(state) {
+            window.localStorage.removeItem('api_token');
             state.isLoggedIn = false;
         },
         SET_USER(state, user) {
@@ -22,21 +19,38 @@ export default {
 
     actions: {
         FETCH_USER({ commit }) {
-            /**
-             * Fetch user data from API
-             *
-             * const user = window.axios...
-             */
+            return new Promise(async (resolve, reject) => {
+                try {
+                    const response = await axios.post('/api/auth/me', '', {
+                        headers: {
+                            Authorization: `Bearer ${window.localStorage.getItem('api_token')}`
+                        }
+                    });
 
-            const user = {
-                name: 'gasaichan'
-            }
+                    commit('SET_USER', response.data);
 
-            this.commit('SET_USER', user);
+                    resolve();
+                } catch (e) {
+                    commit('LOGOUT');
+
+                    reject(e);
+                }
+            });
         },
-        async LOGIN_USER({ commit }, formData) {
-            const response = await window.axios.post('/api/auth/login', formData);
-            console.log(response);
+        async LOGIN_USER({ commit }, data) {
+            return new Promise(async (resolve, reject) => {
+                try {
+                    const response = await window.axios.post('/api/auth/login', data);
+
+                    window.localStorage.setItem('api_token', response.data.access_token);
+
+                    commit('LOGIN');
+
+                    resolve();
+                } catch (e) {
+                    reject(e);
+                }
+            });
         }
     },
 
