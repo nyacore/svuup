@@ -6,6 +6,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Tymon\JWTAuth\Contracts\JWTSubject;
+use App\Models\Lead;
 
 
 class User extends Authenticatable implements JWTSubject
@@ -53,5 +54,9 @@ public function getJWTCustomClaims()
 {
     return [];
 }
+
+public function leads() {
+    return $this->hasMany(Lead::class);
+    }
 
 }

@@ -16,7 +16,7 @@ class LeadContacts extends Controller
     }
 
     public function getLeadList(){
-        return $this->model->get();
+        return  auth('api')->user()->leads;
     }
 
     public function getCreateLeadContact($data):object

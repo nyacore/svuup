@@ -25,7 +25,7 @@ class Task extends Model
 ];
 
 
-    protected $table = 'leads';
+    protected $table = 'tasks';
 
     // public function __construct()
     // {

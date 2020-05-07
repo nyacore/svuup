@@ -25,7 +25,7 @@ class TaskController extends Controller
      */
     public function index()
     {
-    return $this->rep->getTaskList();
+        return response()->json($this->rep->getTaskList(), 200);
     }
 
     /**

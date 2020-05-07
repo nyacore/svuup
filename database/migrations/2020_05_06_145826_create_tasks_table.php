@@ -21,7 +21,7 @@ class CreateTasksTable extends Migration
             $table->string('contact');
             $table->string('performer'); // Исполниетель
             $table->text('comment'); // Комментарий
-            $table->boolean('autorun');
+            $table->boolean('autorun')->default(0);
             $table->timestamps();
         });
     }

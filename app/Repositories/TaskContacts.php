@@ -10,25 +10,25 @@ class TaskContacts extends Controller
 {
     protected $model;
 
-    public function __construct(Tasks $task){
+    public function __construct(Task $task){
         $this->model = $task;
     }
 
     public function getTaskList(){
-        return $this->model->get();
+        return response()->json($this->rep->getTaskList(), 200);
     }
 
     public function getCreateTaskContact($data):object
     {
-        $contact = new Task();
-        $contact['lead_id'] = $data['lead_id'];
-        $contact['date']    = $data['date'];
-        $contact['type']  = $data['type'];
-        $contact['contact']  = $data['contact'];
-        $contact['performer']   = $data['performer'];
-        $contact['comment']    = $data['comment'];
-        $contact->save();
-        return $contact;
+        $task = new Task();
+        $task['lead_id'] = $data['lead_id'];
+        $task['date']    = $data['date'];
+        $task['type']  = $data['type'];
+        $task['contact']  = $data['contact'];
+        $task['performer']   = $data['performer'];
+        $task['comment']    = $data['comment'];
+        $task->save();
+        return $task;
     }
 
     public function getTaskById(int $id)
@@ -42,6 +42,14 @@ class TaskContacts extends Controller
     }
 
     public function getUpdateTaskContact(int $id, Request $request){
-        
+        $task = $this->getTaskById($id);
+        $task['lead_id'] = $request['lead_id'];
+        $task['date']    = $request['date'];
+        $task['type']  = $request['type'];
+        $task['contact']  = $request['contact'];
+        $task['performer']   = $request['performer'];
+        $task['comment']    = $request['comment'];
+        $task->update();
+        return $task;
     } 
 }

@@ -25,7 +25,7 @@ class LeadController extends Controller
      */
     public function index()
     {
-    return $this->rep->getLeadList();
+    return  response()->json($this->rep->getLeadList(),200);
     }
 
     /**
