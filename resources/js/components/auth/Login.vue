@@ -9,10 +9,17 @@
           </v-toolbar>
           <v-card-text>
             <v-form @submit.prevent="login">
-              <v-text-field label="E-mail" name="email" prepend-icon="person" type="text" />
+              <v-text-field
+                label="E-mail"
+                v-model="email"
+                name="email"
+                prepend-icon="person"
+                type="text"
+              />
 
               <v-text-field
                 id="password"
+                v-model="password"
                 label="Пароль"
                 name="password"
                 prepend-icon="lock"
@@ -22,7 +29,7 @@
           </v-card-text>
           <v-card-actions>
             <v-spacer />
-            <v-btn type="submit" color="primary">Войти</v-btn>
+            <v-btn type="submit" @click="login" color="primary">Войти</v-btn>
           </v-card-actions>
         </v-card>
       </v-col>
@@ -34,15 +41,27 @@
 import { mapGetters, mapActions } from "vuex";
 
 export default {
+  data: () => ({
+    email: "",
+    password: ""
+  }),
   methods: {
     ...mapActions(["LOGIN_USER"]),
-    login(event) {
-      this.LOGIN_USER(event.target);
+    async login(event) {
+      try {
+        await this.LOGIN_USER({
+          email: this.email,
+          password: this.password
+        });
+        this.$router.push({ name: "dashboard" });
+      } catch (e) {
+        this.$toast.error("Неверный логин или пароль");
+      }
     }
   },
   mounted() {
     if (this.LOGGED_IN) {
-      this.$router.push({ name: "leads" });
+      this.$router.push({ name: "dashboard" });
     }
   },
   computed: {
