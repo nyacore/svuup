@@ -14,8 +14,14 @@ class TaskContacts extends Controller
         $this->model = $task;
     }
 
-    public function getTaskList(){
-        // return 
+    public function getTaskList($request){
+        $id = auth('api')->user()->id;
+        dd($id);
+        if(isset($request->id)){
+            return $this->model->where('lead_id', $request->id);
+        }else{
+        return $this->model->where('user_id', $id)->get();
+        } 
     }
 
     public function getCreateTaskContact($data):object
@@ -44,6 +50,7 @@ class TaskContacts extends Controller
     public function getUpdateTaskContact(int $id, Request $request){
         $task = $this->getTaskById($id);
         $task['lead_id'] = $request['lead_id'];
+        $task['user_id'] = $request['user_id'];
         $task['date']    = $request['date'];
         $task['type']  = $request['type'];
         $task['contact']  = $request['contact'];

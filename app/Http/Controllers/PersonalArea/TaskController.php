@@ -23,9 +23,9 @@ class TaskController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return response()->json($this->rep->getTaskList(), 200);
+        return response()->json($this->rep->getTaskList($request), 200);
     }
 
     /**

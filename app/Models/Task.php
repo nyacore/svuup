@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
-
+use App\Models\Lead;
 class Task extends Model
 {
 
@@ -27,9 +27,9 @@ class Task extends Model
 
     protected $table = 'tasks';
 
-    // public function __construct()
-    // {
-    //      DB::table('tasks_contact');
-    // }
+    public function tasks()
+    {
+        return $this->hasOne(Lead::class);
+    }
 }
 

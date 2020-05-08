@@ -16,6 +16,7 @@ class CreateTasksTable extends Migration
         Schema::create('tasks', function (Blueprint $table) {
             $table->id();
             $table->string('lead_id'); // ID родительского контакта
+            $table->integer('user_id');
             $table->dateTime('date'); // Дата
             $table->string('type'); // Тип
             $table->string('contact');
