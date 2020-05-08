@@ -22,7 +22,7 @@ const router = new VueRouter({
             component: Leads,
         },
         {
-            path: '/admin/login',
+            path: '/login',
             name: 'login',
             component: Login
         }

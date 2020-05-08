@@ -13,9 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
 Route::group([
     'prefix' => 'auth'
 ], function () {
@@ -26,8 +23,7 @@ Route::group([
     Route::post('me', 'Auth\AuthController@me');
 });
 
-// Route::get('/','Controller');
-Route::group(['prefix' => 'admin'], static function () {
+Route::group(['prefix' => 'admin', 'middleware' => 'auth:api'], static function () {
     Route::resource('leads', 'PersonalArea\LeadController');
     Route::resource('tasks', 'PersonalArea\TaskController');
     // Route::get('contacts', 'contactsController');
