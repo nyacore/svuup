@@ -13,34 +13,14 @@ export default {
         }
     },
     actions: {
-        FETCH_LEADS({ commit }) {
-            commit('SET_LEADS', [
-                {
-                    name: "Прозвон 1",
-                    email: "email@test.com",
-                    phone: "+7 (927) 627-10-75"
-                },
-                {
-                    name: "Прозвон 2",
-                    email: "email@test.com",
-                    phone: "+7 (927) 627-10-75"
-                },
-                {
-                    name: "Прозвон 3",
-                    email: "email@test.com",
-                    phone: "+7 (927) 627-10-75"
-                },
-                {
-                    name: "Прозвон 4",
-                    email: "email@test.com",
-                    phone: "+7 (927) 627-10-75"
-                },
-                {
-                    name: "Прозвон 5",
-                    email: "email@test.com",
-                    phone: "+7 (927) 627-10-75"
+        async FETCH_LEADS({ commit }) {
+            const leads = await axios.get('/api/admin/leads', {
+                headers: {
+                    Authorization: `Bearer ${window.localStorage.getItem('api_token')}`
                 }
-            ]);
+            });
+
+            commit('SET_LEADS', leads.data);
         }
     }
 }

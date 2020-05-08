@@ -35,12 +35,18 @@
     <v-app-bar app>
       <v-toolbar-title>Скорозвон</v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-text-field single-line label="Найти или позвонить" dense prepend-icon="search"></v-text-field>
-      <v-btn icon>
+      <v-text-field
+        v-if="LOGGED_IN"
+        single-line
+        label="Найти или позвонить"
+        dense
+        prepend-icon="search"
+      ></v-text-field>
+      <v-btn v-if="LOGGED_IN" icon>
         <v-icon>notifications</v-icon>
       </v-btn>
-      <v-avatar outlined color="primary">
-        <span class="text-uppercase white--text">{{ USER.name[0] }}</span>
+      <v-avatar v-if="LOGGED_IN" outlined color="primary">
+        <span class="text-uppercase white--text">{{ USER.name ? USER.name[0] : '' }}</span>
       </v-avatar>
     </v-app-bar>
 
