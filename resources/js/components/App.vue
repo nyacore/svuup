@@ -1,29 +1,47 @@
 <template>
   <v-app id="inspire">
-    <v-navigation-drawer :mini-variant="miniVariant" color="primary" dark app v-if="LOGGED_IN">
+    <v-navigation-drawer
+      mini-variant-width="100"
+      mini-variant
+      color="primary"
+      dark
+      app
+      v-if="LOGGED_IN"
+    >
       <v-list-item>
-        <v-list-item-avatar></v-list-item-avatar>
-        <v-list-item-content>
-          <v-list-item-title class="title">{{ USER.name }}</v-list-item-title>
-          <v-list-item-subtitle>{{ USER.email }}</v-list-item-subtitle>
-        </v-list-item-content>
+        <!-- <v-list-item-avatar color="white">
+          <v-icon color="primary">mdi-account-circle</v-icon>
+        </v-list-item-avatar>-->
       </v-list-item>
       <v-divider></v-divider>
       <v-list dense nav>
-        <v-list-item v-for="item in navigation" :key="item.route" :to="item.route" link>
-          <v-list-item-icon>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-icon>
+        <v-list-item
+          v-for="item in navigation"
+          :key="item.route"
+          exact
+          :to="{ name: item.route }"
+          link
+        >
           <v-list-item-content>
-            <v-list-item-title>{{ item.text }}</v-list-item-title>
+            <v-list-item-title class="text-center">
+              <v-icon>{{ item.icon }}</v-icon>
+            </v-list-item-title>
+            <v-list-item-subtitle class="text-center">{{ item.text }}</v-list-item-subtitle>
           </v-list-item-content>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
 
     <v-app-bar app>
-      <v-app-bar-nav-icon v-if="LOGGED_IN" @click.stop="miniVariant = !miniVariant" />
       <v-toolbar-title>Скорозвон</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-text-field single-line label="Найти или позвонить" dense prepend-icon="search"></v-text-field>
+      <v-btn icon>
+        <v-icon>notifications</v-icon>
+      </v-btn>
+      <v-avatar outlined color="primary">
+        <span class="text-uppercase white--text">{{ USER.name[0] }}</span>
+      </v-avatar>
     </v-app-bar>
 
     <v-content>
@@ -37,7 +55,6 @@ import { mapGetters, mapActions } from "vuex";
 
 export default {
   data: () => ({
-    miniVariant: false,
     navigation: [
       {
         icon: "call",

@@ -4,19 +4,25 @@ import Login from '../components/auth/Login';
 import Leads from '../components/Leads';
 
 const router = new VueRouter({
+    mode: 'history',
+
     routes: [
         {
             path: '/',
-            name: 'home',
-            component: Leads
+            redirect: '/admin'
         },
         {
-            path: '/leads',
-            name: 'dashboard',
+            path: '/admin',
+            name: 'home',
             component: Leads,
         },
         {
-            path: '/login',
+            path: '/admin/leads',
+            name: 'leads',
+            component: Leads,
+        },
+        {
+            path: '/admin/login',
             name: 'login',
             component: Login
         }

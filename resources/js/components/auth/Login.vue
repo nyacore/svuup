@@ -53,7 +53,7 @@ export default {
           email: this.email,
           password: this.password
         });
-        this.$router.push({ name: "dashboard" });
+        this.$router.push({ name: "leads" });
       } catch (e) {
         this.$toast.error("Неверный логин или пароль");
       }
@@ -61,7 +61,7 @@ export default {
   },
   mounted() {
     if (this.LOGGED_IN) {
-      this.$router.push({ name: "dashboard" });
+      this.$router.push({ name: "leads" });
     }
   },
   computed: {

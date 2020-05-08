@@ -26,20 +26,16 @@ Route::group([
     Route::post('me', 'Auth\AuthController@me');
 });
 
-Route::get('/','HomeController@index');
 // Route::get('/','Controller');
-Route::group([ 'prefix' => 'admin'], static function () {
-        Route::resource('leads', 'PersonalArea\LeadController');
-        Route::resource('tasks', 'PersonalArea\TaskController');
-        // Route::get('contacts', 'contactsController');
-        // Route::get('reports', 'reportsController');
-        // Route::get('calls','callsController');
-        // Route::get('help','helpController');
-        // Route::get('personal','personalController');
-        // Route::get('team','teamController');
-        // Route::get('balance','balanceController');
-        // Route::get('partner','partnerController');
+Route::group(['prefix' => 'admin'], static function () {
+    Route::resource('leads', 'PersonalArea\LeadController');
+    Route::resource('tasks', 'PersonalArea\TaskController');
+    // Route::get('contacts', 'contactsController');
+    // Route::get('reports', 'reportsController');
+    // Route::get('calls','callsController');
+    // Route::get('help','helpController');
+    // Route::get('personal','personalController');
+    // Route::get('team','teamController');
+    // Route::get('balance','balanceController');
+    // Route::get('partner','partnerController');
 });
-
-
-
