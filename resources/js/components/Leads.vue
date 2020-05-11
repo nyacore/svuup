@@ -2,7 +2,16 @@
   <v-container>
     <v-row justify="space-between">
       <v-col>
-        <v-data-table :headers="headers" :items="LEADS" :items-per-page="5" class="elevation-1"></v-data-table>
+        <v-data-table
+          :loading="tableLoading"
+          :headers="headers"
+          :items="LEADS.data"
+          :server-items-length="LEADS.total"
+          :items-per-page="LEADS.per_page"
+          @update:page="updatePage"
+          @click:row="showLead"
+          class="elevation-1"
+        ></v-data-table>
       </v-col>
       <v-col sm="12" lg="3">
         <v-card class="mb-2">
@@ -65,7 +74,7 @@
         </v-card>
       </v-col>
     </v-row>
-    <v-btn color="primary" fab right fixed bottom>
+    <v-btn :to="{ name: 'leads.create' }" color="primary" fab right fixed bottom>
       <v-icon>add</v-icon>
     </v-btn>
   </v-container>
@@ -82,6 +91,7 @@ export default {
   },
   data: () => ({
     afterTimePicker: false,
+    tableLoading: true,
     afterDate: null,
     beforeTimePicker: false,
     beforeDate: null,
@@ -97,12 +107,12 @@ export default {
       {
         text: "Email",
         sortable: false,
-        value: "email"
+        value: "emails"
       },
       {
         text: "Телефон",
         sortable: false,
-        value: "phone"
+        value: "phones"
       }
     ]
   }),
@@ -111,15 +121,24 @@ export default {
     this.callScenario = this.SCENARIOS[0];
 
     await this.FETCH_LEADS();
+    this.tableLoading = false;
 
-    console.log(this.LEADS);
     this.FETCH_TAGS();
   },
   computed: {
     ...mapGetters(["SCENARIOS", "TAGS", "LEADS"])
   },
   methods: {
-    ...mapActions(["FETCH_SCENARIOS", "FETCH_TAGS", "FETCH_LEADS"])
+    ...mapActions(["FETCH_SCENARIOS", "FETCH_TAGS", "FETCH_LEADS"]),
+    async updatePage(page) {
+      this.tableLoading = true;
+      await this.FETCH_LEADS(page);
+      this.tableLoading = false;
+    },
+    showLead(e) {
+      console.log(e);
+      this.$router.push({ name: "leads.show", params: { id: e.id } });
+    }
   }
 };
 </script>
