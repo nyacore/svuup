@@ -15,8 +15,18 @@ class LeadContacts extends Controller
         $this->model = $lead;
     }
 
-    public function getLeadList(){
-        return  auth('api')->user()->leads;
+    public function getLeadList(Request $request){
+         $builds = auth('api')->user()->leads()->paginate(10);
+         if(isset($request->from_date)){
+             $builds->whereDate('created_at','>', $request->from_date);
+         };
+         if(isset($request->to_date)){
+            $builds->whereDate('created_at','<', $request->to_date);
+        };
+         if(isset($request->tag)){
+            return $builds->where('tags', $request->tag);
+         };
+         return $builds;
     }
 
     public function getCreateLeadContact($data):object

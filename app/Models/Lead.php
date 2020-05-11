@@ -5,8 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 
-
-class Lead extends Model
+class Lead extends Model 
 {
     /**
      * The attributes that are mass assignable.
@@ -33,9 +32,4 @@ class Lead extends Model
     ];
 
     protected $table = 'leads';
-
-    public function getTask()
-    {
-        return $this->hasMany(App\Models\Lead::class);
-    }
 }
