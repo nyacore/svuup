@@ -11,7 +11,8 @@ class LeadContacts extends Controller
 {
     protected $model;
 
-    public function __construct(Lead $lead){
+    public function __construct(Lead $lead)
+    {
         $this->model = $lead;
     }
 
@@ -27,31 +28,35 @@ class LeadContacts extends Controller
          if(isset($request->to_date)){
             $builds->whereDate('created_at','<', $request->to_date);
         };
-         if(isset($request->tag)){
+        if (isset($request->to_date)) {
+            $builds->whereDate('created_at', '<', $request->to_date);
+        };
+        if (isset($request->tag)) {
             return $builds->where('tags', $request->tag);
-         };
-         return $builds;
+        };
+        return $builds;
     }
 
-    public function getCreateLeadContact($data):object
-    { 
-        $contact = new Lead();
-        $contact['user_id'] = $data['user_id'];
-        $contact['name']    = $data['name'];
-        $contact['phones']  = $data['phones'];
-        $contact['emails']  = $data['emails'];
-        $contact['sites']   = $data['sites'];
-        $contact['city']    = $data['city'];
-        $contact['street']  = $data['street'];
-        $contact['region']  = $data['region'];
-        $contact['activity']= $data['activity'];
-        $contact['INN']     = $data['INN'];
-        $contact['KPP']     = $data['KPP'];
-        $contact['tags']    = $data['tags'];
-        $contact['desc']    = $data['desc'];
-        $contact['responsible']= $data['responsible'];
-        $contact->save();
-        return $contact;
+    public function getCreateLeadContact($data): object
+    {
+        // $contact = new Lead();
+        // $contact['user_id'] = $data['user_id'];
+        // $contact['name']    = $data['name'];
+        // $contact['phones']  = $data['phones'];
+        // $contact['emails']  = $data['emails'];
+        // $contact['sites']   = $data['sites'];
+        // $contact['city']    = $data['city'];
+        // $contact['street']  = $data['street'];
+        // $contact['region']  = $data['region'];
+        // $contact['activity']= $data['activity'];
+        // $contact['INN']     = $data['INN'];
+        // $contact['KPP']     = $data['KPP'];
+        // $contact['tags']    = $data['tags'];
+        // $contact['desc']    = $data['desc'];
+        // $contact['responsible']= $data['responsible'];
+        // $contact->save();
+
+        return auth('api')->user()->leads()->save(new Lead($data->all()));
     }
 
     public function getLeadById(int $id)
@@ -59,12 +64,12 @@ class LeadContacts extends Controller
         return $this->model->find($id);
     }
 
-    public function destroyLeadById(int $id):void
+    public function destroyLeadById(int $id): void
     {
         $this->getLeadById($id)->delete();
     }
 
-    public function getUpdateLeadContact(Request $request, int $id):object
+    public function getUpdateLeadContact(Request $request, int $id): object
     {
         $obj = $this->getLeadById($id);
         $obj['user_id'] = $request['user_id'];
@@ -75,13 +80,13 @@ class LeadContacts extends Controller
         $obj['city']    = $request['city'];
         $obj['street']  = $request['street'];
         $obj['region']  = $request['region'];
-        $obj['activity']= $request['activity'];
+        $obj['activity'] = $request['activity'];
         $obj['INN']     = $request['INN'];
         $obj['KPP']     = $request['KPP'];
         $obj['tags']    = $request['tags'];
         $obj['desc']    = $request['desc'];
-        $obj['responsible']= $request['responsible'];
+        $obj['responsible'] = $request['responsible'];
         $obj->update();
-        return $obj;   
-    } 
+        return $obj;
+    }
 }
