@@ -1,5 +1,15 @@
 <template>
-  <v-data-table :headers="headers" :items="TASKS" flat></v-data-table>
+  <v-data-table :headers="headers" :items="TASKS" flat>
+    <template v-slot:item.completed="{ item }">
+      <v-simple-checkbox v-model="item.completed"></v-simple-checkbox>
+    </template>
+    <template v-slot:item.date="{ item }">{{ new Date(item.date).toLocaleString() }}</template>
+    <template v-slot:item.created_at="{ item }">{{ new Date(item.created_at).toLocaleDateString() }}</template>
+    <template v-slot:item.actions="{ item }">
+      <v-icon small class="mr-2" @click="editItem(item)">mdi-pencil</v-icon>
+      <v-icon small @click="deleteItem(item)">mdi-delete</v-icon>
+    </template>
+  </v-data-table>
 </template>
 
 <script>
@@ -33,6 +43,16 @@ export default {
         text: "Исполнитель",
         sortable: false,
         value: "performer"
+      },
+      {
+        text: "Выполнена",
+        sortable: true,
+        value: "completed"
+      },
+      {
+        text: "Действия",
+        sortable: false,
+        value: "actions"
       }
     ]
   }),

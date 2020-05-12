@@ -45,7 +45,7 @@
         </v-card>
       </v-col>
       <v-col cols="7">
-        <v-tabs flat v-model="tab">
+        <v-tabs @change="changeTab" flat v-model="tab">
           <v-tabs-slider></v-tabs-slider>
 
           <v-tab v-for="tab in tabs" :key="tab.value" :href="`#${tab.value}`">{{ tab.title }}</v-tab>
@@ -108,6 +108,9 @@ export default {
     ...mapActions(["FETCH_TAGS", "STORE_LEAD", "FETCH_LEAD"]),
     submit(e) {
       this.STORE_LEAD(this.lead);
+    },
+    changeTab(e) {
+      this.$router.replace({ hash: `#${e}` });
     }
   },
   computed: {
