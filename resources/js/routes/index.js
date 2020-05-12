@@ -1,9 +1,9 @@
 import VueRouter from 'vue-router';
 
 import Login from '../components/auth/Login';
-import Leads from '../components/Leads';
-import CreateLead from '../components/CreateLead';
-import ShowLead from '../components/ShowLead';
+import Leads from '../components/leads/Leads';
+import CreateLead from '../components/leads/CreateLead';
+import ShowLead from '../components/leads/ShowLead';
 
 const router = new VueRouter({
     mode: 'history',

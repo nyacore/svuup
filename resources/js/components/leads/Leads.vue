@@ -81,7 +81,7 @@
 </template>
 
 <script>
-import MultiSelect from "./ui/MultiSelect";
+import MultiSelect from "../ui/MultiSelect";
 
 import { mapGetters, mapActions } from "vuex";
 
@@ -136,7 +136,6 @@ export default {
       this.tableLoading = false;
     },
     showLead(e) {
-      console.log(e);
       this.$router.push({ name: "leads.show", params: { id: e.id } });
     }
   }

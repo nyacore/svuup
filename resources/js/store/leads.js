@@ -22,6 +22,15 @@ export default {
 
             commit('SET_LEADS', leads.data);
         },
+        async FETCH_LEAD({ commit }, id) {
+            const lead = await axios.get(`/api/admin/leads/${id}`, {
+                headers: {
+                    Authorization: `Bearer ${window.localStorage.getItem('api_token')}`
+                }
+            });
+
+            commit('SET_LEADS', [lead.data]);
+        },
         async STORE_LEAD({ commit }, data) {
             const response = await axios.post(`/api/admin/leads`, data, {
                 headers: {

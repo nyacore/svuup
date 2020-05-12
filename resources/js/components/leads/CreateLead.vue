@@ -50,7 +50,7 @@
 </template>
 
 <script>
-import MultiSelect from "./ui/MultiSelect";
+import MultiSelect from "../ui/MultiSelect";
 import { mapGetters, mapActions } from "vuex";
 
 export default {

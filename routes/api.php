@@ -24,6 +24,7 @@ Route::group([
 });
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth:api'], static function () {
+    Route::get('leads/{lead}/tasks', 'PersonalArea\LeadController@tasks');
     Route::resource('leads', 'PersonalArea\LeadController');
     Route::resource('tasks', 'PersonalArea\TaskController');
     // Route::get('contacts', 'contactsController');

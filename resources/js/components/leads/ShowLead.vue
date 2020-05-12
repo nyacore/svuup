@@ -1,13 +1,16 @@
 <template>
   <v-container fluid class="fill-height">
-    <v-row class="fill-height">
+    <v-row justify="space-around" class="fill-height">
       <v-col cols="4">
         <v-card class="fill-height" flat>
-          <v-card-title>Новая организация</v-card-title>
+          <v-card-title>{{ lead.name }}</v-card-title>
+          <v-card-subtitle>{{ lead.phones }}</v-card-subtitle>
+
+          <v-btn class="ma-2" color="primary">Позвонить</v-btn>
 
           <v-divider></v-divider>
 
-          <v-card-text class="fill-height" style="overflow-y: scroll; max-height: 70vh">
+          <v-card-text class="fill-height" style="overflow-y: scroll; max-height: 65vh">
             <form @submit.prevent="submit">
               <v-text-field v-model="lead.name" label="Название" name="name"></v-text-field>
               <v-text-field
@@ -41,20 +44,37 @@
           </v-card-actions>
         </v-card>
       </v-col>
-      <v-col>
-        <v-divider vertical cols="1"></v-divider>
+      <v-col cols="7">
+        <v-tabs flat v-model="tab">
+          <v-tabs-slider></v-tabs-slider>
+
+          <v-tab v-for="tab in tabs" :key="tab.value" :href="`#${tab.value}`">{{ tab.title }}</v-tab>
+
+          <v-tab-item v-for="tab in tabs" :key="tab.value" :value="tab.value">
+            <component :is="tab.component"></component>
+          </v-tab-item>
+        </v-tabs>
       </v-col>
-      <v-col cols="7"></v-col>
     </v-row>
   </v-container>
 </template>
 
 <script>
-import MultiSelect from "./ui/MultiSelect";
+import MultiSelect from "../ui/MultiSelect";
+import HistoryTab from "./tabs/HistoryTab";
+import ScenarioTab from "./tabs/ScenarioTab";
+import TasksTab from "./tabs/TasksTab";
+
 import { mapGetters, mapActions } from "vuex";
 
 export default {
   data: () => ({
+    tab: "",
+    tabs: [
+      { title: "Сценарий", value: "scenario", component: "scenario-tab" },
+      { title: "История", value: "history", component: "history-tab" },
+      { title: "Задачи", value: "tasks", component: "tasks-tab" }
+    ],
     lead: {
       name: "",
       phones: "",
@@ -72,19 +92,26 @@ export default {
     }
   }),
   components: {
-    "multi-select": MultiSelect
+    "multi-select": MultiSelect,
+    "scenario-tab": ScenarioTab,
+    "history-tab": HistoryTab,
+    "tasks-tab": TasksTab
   },
   async mounted() {
     this.FETCH_TAGS();
+
+    await this.FETCH_LEAD(this.$route.params.id);
+
+    this.lead = this.LEADS[0];
   },
   methods: {
-    ...mapActions(["FETCH_TAGS", "STORE_LEAD"]),
+    ...mapActions(["FETCH_TAGS", "STORE_LEAD", "FETCH_LEAD"]),
     submit(e) {
       this.STORE_LEAD(this.lead);
     }
   },
   computed: {
-    ...mapGetters(["TAGS"])
+    ...mapGetters(["TAGS", "LEADS"])
   }
 };
 </script>

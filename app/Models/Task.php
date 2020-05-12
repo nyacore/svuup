@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 use App\Models\Lead;
+
 class Task extends Model
 {
 
@@ -13,8 +14,8 @@ class Task extends Model
      *
      * @var array
      */
-    
-    protected $fillable = [ 
+
+    protected $fillable = [
         'lead_id', // ID родительского контакта
         'date', // Дата
         'type', // Тип
@@ -22,7 +23,9 @@ class Task extends Model
         'performer', // Исполниетель
         'comment', // Комментарий
         'autorun', // Автозапуск
-];
+    ];
+
+    protected $with = ['user'];
 
 
     protected $table = 'tasks';
@@ -31,5 +34,9 @@ class Task extends Model
     {
         return $this->hasOne(Lead::class);
     }
-}
 
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+}
