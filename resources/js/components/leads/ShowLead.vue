@@ -3,11 +3,12 @@
     <v-row justify="space-around" class="fill-height">
       <v-col cols="4">
         <v-card class="fill-height" flat>
-          <v-card-title>{{ lead.name }}</v-card-title>
-          <v-card-subtitle>{{ lead.phones }}</v-card-subtitle>
+          <div class="primary">
+            <v-card-title class="white--text">{{ lead.name }}</v-card-title>
+            <v-card-subtitle class="white--text">{{ lead.phones }}</v-card-subtitle>
 
-          <v-btn class="ma-2" color="primary">Позвонить</v-btn>
-
+            <v-btn class="primary--text ma-2" color="white">Позвонить</v-btn>
+          </div>
           <v-divider></v-divider>
 
           <v-card-text class="fill-height" style="overflow-y: scroll; max-height: 65vh">
@@ -39,7 +40,7 @@
           </v-card-text>
           <v-card-actions>
             <v-spacer></v-spacer>
-            <v-btn exact text :to="{ name: 'leads' }">Отмена</v-btn>
+            <v-btn exact text @click="$router.go(-1)">Отмена</v-btn>
             <v-btn @click="submit" color="primary">Сохранить</v-btn>
           </v-card-actions>
         </v-card>

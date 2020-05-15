@@ -4,6 +4,7 @@ import Login from '../components/auth/Login';
 import Leads from '../components/leads/Leads';
 import CreateLead from '../components/leads/CreateLead';
 import ShowLead from '../components/leads/ShowLead';
+import Contacts from '../components/Contacts';
 
 const router = new VueRouter({
     mode: 'history',
@@ -32,6 +33,11 @@ const router = new VueRouter({
             path: '/admin/leads/:id',
             name: 'leads.show',
             component: ShowLead
+        },
+        {
+            path: '/admin/contacts',
+            name: 'contacts',
+            component: Contacts
         },
         {
             path: '/login',

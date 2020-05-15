@@ -21,6 +21,14 @@ export default {
             });
 
             commit('SET_TASKS', tasks.data);
+        },
+
+        async DELETE_TASK({ commit }, taskId) {
+            await axios.delete(`/api/admin/tasks/${taskId}`, {
+                headers: {
+                    Authorization: `Bearer ${window.localStorage.getItem('api_token')}`
+                }
+            });
         }
     }
 }

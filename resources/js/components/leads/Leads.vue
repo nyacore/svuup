@@ -59,7 +59,7 @@
           <v-card-subtitle>Последний звонок:</v-card-subtitle>
           <v-card-text>
             <v-select :items="['Стандартный']"></v-select>
-            <v-select label="Выберите сценарий:" :items="['Стандартный']"></v-select>
+            <v-select label="Выберите сценарий:" :items="SCENARIOS"></v-select>
           </v-card-text>
         </v-card>
         <v-card class="mb-2">
