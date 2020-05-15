@@ -45,9 +45,32 @@
       <v-btn v-if="LOGGED_IN" icon>
         <v-icon>notifications</v-icon>
       </v-btn>
-      <v-avatar v-if="LOGGED_IN" outlined color="primary">
-        <span class="text-uppercase white--text">{{ USER.name ? USER.name[0] : '' }}</span>
-      </v-avatar>
+      <v-menu transition="slide-y-transition" min-width="150" offset-y v-if="LOGGED_IN">
+        <template v-slot:activator="{ on }">
+          <v-btn v-on="on" fab color="primary">{{ USER.name ? USER.name[0] : '' }}</v-btn>
+        </template>
+        <v-list>
+          <v-list-item>
+            <v-list-item-icon>
+              <v-icon>account_balance_wallet</v-icon>
+            </v-list-item-icon>
+            <v-list-item-title>Баланс</v-list-item-title>
+          </v-list-item>
+          <v-list-item>
+            <v-list-item-icon>
+              <v-icon>settings</v-icon>
+            </v-list-item-icon>
+            <v-list-item-title>Настройки</v-list-item-title>
+          </v-list-item>
+          <v-divider></v-divider>
+          <v-list-item @click="logout">
+            <v-list-item-icon>
+              <v-icon>exit_to_app</v-icon>
+            </v-list-item-icon>
+            <v-list-item-title>Выход</v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-menu>
     </v-app-bar>
 
     <v-content>
@@ -59,7 +82,7 @@
 </template>
 
 <script>
-import { mapGetters, mapActions } from "vuex";
+import { mapGetters, mapActions, mapMutations } from "vuex";
 
 export default {
   data: () => ({
@@ -98,7 +121,12 @@ export default {
     ...mapGetters(["LOGGED_IN", "USER"])
   },
   methods: {
-    ...mapActions(["FETCH_USER"])
+    ...mapMutations(["LOGOUT"]),
+    ...mapActions(["FETCH_USER"]),
+    logout() {
+      this.LOGOUT();
+      this.$router.push({ name: "sign-in" });
+    }
   },
   async mounted() {
     if (this.LOGGED_IN) {

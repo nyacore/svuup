@@ -53,6 +53,7 @@ export default {
           email: this.email,
           password: this.password
         });
+        console.log(this.LOGGED_IN);
         this.$router.push({ name: "leads" });
       } catch (e) {
         this.$toast.error("Неверный логин или пароль");
