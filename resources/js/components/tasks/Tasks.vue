@@ -22,7 +22,7 @@ export default {
       this.FETCH_TASKS(page);
     },
     taskDeleted(page) {
-      this.FETCH_TASKS;
+      this.FETCH_TASKS(page);
     }
   },
   computed: {

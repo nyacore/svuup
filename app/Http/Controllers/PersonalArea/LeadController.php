@@ -109,6 +109,6 @@ class LeadController extends Controller
      */
     public function tasks(Lead $lead): JsonResponse
     {
-        return response()->json($lead->tasks);
+        return response()->json($lead->tasks()->paginate(10));
     }
 }

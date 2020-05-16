@@ -23,7 +23,7 @@ export default {
             commit('SET_TASKS', tasks.data);
         },
 
-        async FETCH_TASKS_BY_LEAD({ commit }, leadId) {
+        async FETCH_TASKS_BY_LEAD({ commit }, leadId, page = 1) {
             const tasks = await axios.get(`/api/admin/leads/${leadId}/tasks`, {
                 headers: {
                     Authorization: `Bearer ${window.localStorage.getItem('api_token')}`
