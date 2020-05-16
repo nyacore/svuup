@@ -16,11 +16,17 @@ class LeadContacts extends Controller
         $this->model = $lead;
     }
 
-    public function getLeadList(Request $request)
-    {
-        $builds = auth('api')->user()->leads()->paginate(10);
-        if (isset($request->from_date)) {
-            $builds->whereDate('created_at', '>', $request->from_date);
+    public function getLeadList(Request $request){
+        if(isset($request->paginate)){
+            $builds = auth('api')->user()->leads()->paginate($request->paginate);
+        }else{
+            $builds = auth('api')->user()->leads()->paginate(10);
+        };
+         if(isset($request->from_date)){
+             $builds->whereDate('created_at','>', $request->from_date);
+         };
+         if(isset($request->to_date)){
+            $builds->whereDate('created_at','<', $request->to_date);
         };
         if (isset($request->to_date)) {
             $builds->whereDate('created_at', '<', $request->to_date);
