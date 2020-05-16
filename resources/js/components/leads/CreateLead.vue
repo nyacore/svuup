@@ -11,27 +11,45 @@
             <form @submit.prevent="submit">
               <v-text-field v-model="lead.name" label="Название" name="name"></v-text-field>
               <v-text-field
+                dense
                 v-model="lead.phones"
                 prepend-icon="phone"
                 label="Телефон"
                 name="phones"
               ></v-text-field>
-              <v-text-field v-model="lead.emails" prepend-icon="email" label="Email" name="emails"></v-text-field>
-              <v-text-field v-model="lead.sites" prepend-icon="web" label="Сайт" name="sites"></v-text-field>
               <v-text-field
+                dense
+                v-model="lead.emails"
+                prepend-icon="email"
+                label="Email"
+                name="emails"
+              ></v-text-field>
+              <v-text-field dense v-model="lead.sites" prepend-icon="web" label="Сайт" name="sites"></v-text-field>
+              <v-text-field
+                dense
                 v-model="lead.city"
                 prepend-icon="location_city"
                 label="Город"
                 name="city"
               ></v-text-field>
-              <v-text-field v-model="lead.street" label="Адрес" name="address"></v-text-field>
-              <v-text-field v-model="lead.region" label="Регион" name="region"></v-text-field>
-              <v-text-field v-model="lead.activity" label="Сфера деятельности" name="activity"></v-text-field>
-              <v-text-field v-model="lead.INN" label="ИНН" name="INN"></v-text-field>
-              <v-text-field v-model="lead.KPP" label="КПП" name="KPP"></v-text-field>
+              <v-text-field dense v-model="lead.street" label="Адрес" name="address"></v-text-field>
+              <v-text-field dense v-model="lead.region" label="Регион" name="region"></v-text-field>
+              <v-text-field
+                dense
+                v-model="lead.activity"
+                label="Сфера деятельности"
+                name="activity"
+              ></v-text-field>
+              <v-text-field dense v-model="lead.INN" label="ИНН" name="INN"></v-text-field>
+              <v-text-field dense v-model="lead.KPP" label="КПП" name="KPP"></v-text-field>
               <multi-select v-model="lead.tags" :items="TAGS" label="Теги"></multi-select>
-              <v-textarea v-model="lead.desc" name="description" label="Описание" rows="3"></v-textarea>
-              <v-text-field v-model="lead.responsible" label="Ответственный" name="responsible"></v-text-field>
+              <v-textarea dense v-model="lead.desc" name="description" label="Описание" rows="2"></v-textarea>
+              <v-text-field
+                dense
+                v-model="lead.responsible"
+                label="Ответственный"
+                name="responsible"
+              ></v-text-field>
             </form>
           </v-card-text>
           <v-card-actions>

@@ -13,6 +13,16 @@ export default {
         }
     },
     actions: {
+        async FETCH_TASKS({ commit }, page = 1) {
+            const tasks = await axios.get(`/api/admin/tasks?page=${page}`, {
+                headers: {
+                    Authorization: `Bearer ${window.localStorage.getItem('api_token')}`
+                }
+            });
+
+            commit('SET_TASKS', tasks.data);
+        },
+
         async FETCH_TASKS_BY_LEAD({ commit }, leadId) {
             const tasks = await axios.get(`/api/admin/leads/${leadId}/tasks`, {
                 headers: {

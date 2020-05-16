@@ -16,12 +16,12 @@
       <v-col sm="12" lg="3">
         <v-card class="mb-2">
           <v-card-text>
-            <v-select v-model="callScenario" label="Сценарий прозвона" :items="SCENARIOS"></v-select>
+            <v-select dense v-model="callScenario" label="Сценарий прозвона" :items="SCENARIOS"></v-select>
           </v-card-text>
         </v-card>
         <v-card class="mb-2">
           <v-card-text>
-            <v-checkbox label="Время клиента"></v-checkbox>
+            <v-checkbox dense label="Время клиента"></v-checkbox>
           </v-card-text>
         </v-card>
         <v-card class="mb-2">
@@ -36,7 +36,13 @@
               min-width="290px"
             >
               <template v-slot:activator="{ on }">
-                <v-text-field v-model="afterDate" label="После" prepend-icon="event" v-on="on"></v-text-field>
+                <v-text-field
+                  dense
+                  v-model="afterDate"
+                  label="После"
+                  prepend-icon="event"
+                  v-on="on"
+                ></v-text-field>
               </template>
               <v-date-picker v-model="afterDate" @input="afterTimePicker = false"></v-date-picker>
             </v-menu>
@@ -49,7 +55,7 @@
               min-width="290px"
             >
               <template v-slot:activator="{ on }">
-                <v-text-field v-model="beforeDate" label="До" prepend-icon="event" v-on="on"></v-text-field>
+                <v-text-field dense v-model="beforeDate" label="До" prepend-icon="event" v-on="on"></v-text-field>
               </template>
               <v-date-picker v-model="beforeDate" @input="beforeTimePicker = false"></v-date-picker>
             </v-menu>
@@ -58,8 +64,8 @@
         <v-card class="mb-2">
           <v-card-subtitle>Последний звонок:</v-card-subtitle>
           <v-card-text>
-            <v-select :items="['Стандартный']"></v-select>
-            <v-select label="Выберите сценарий:" :items="SCENARIOS"></v-select>
+            <v-select dense :items="['Стандартный']"></v-select>
+            <v-select dense label="Выберите сценарий:" :items="SCENARIOS"></v-select>
           </v-card-text>
         </v-card>
         <v-card class="mb-2">

@@ -98,6 +98,11 @@ export default {
         route: "contacts"
       },
       {
+        icon: "done",
+        text: "Задачи",
+        route: "tasks"
+      },
+      {
         icon: "assignment",
         text: "Отчеты",
         route: "reports"

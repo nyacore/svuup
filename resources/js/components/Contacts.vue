@@ -16,11 +16,11 @@
       <v-col sm="12" lg="3">
         <v-card>
           <v-card-text>
-            <v-text-field label="Поиск по всем значениям"></v-text-field>
-            <v-checkbox label="Скрыть прозвоненные"></v-checkbox>
+            <v-text-field dense label="Поиск по всем значениям"></v-text-field>
+            <v-checkbox dense label="Скрыть прозвоненные"></v-checkbox>
             <multi-select label="Ответственный" :items="responsibles"></multi-select>
             <multi-select label="Теги" :items="TAGS"></multi-select>
-            <v-select label="Выберите сценарий" :items="SCENARIOS"></v-select>
+            <v-select dense label="Выберите сценарий" :items="SCENARIOS"></v-select>
           </v-card-text>
         </v-card>
       </v-col>

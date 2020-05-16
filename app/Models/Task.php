@@ -30,9 +30,9 @@ class Task extends Model
 
     protected $table = 'tasks';
 
-    public function tasks()
+    public function lead()
     {
-        return $this->hasOne(Lead::class);
+        return $this->belongsTo(Lead::class);
     }
 
     public function user()

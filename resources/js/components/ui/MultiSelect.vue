@@ -1,5 +1,5 @@
 <template>
-  <v-select :label="label" :items="items" v-model="value" multiple chips>
+  <v-select dense :label="label" :items="items" v-model="value" multiple chips>
     <template v-slot:prepend-item>
       <v-list-item ripple @click="toggle">
         <v-list-item-action>

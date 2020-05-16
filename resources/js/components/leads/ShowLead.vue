@@ -12,31 +12,71 @@
           <v-divider></v-divider>
 
           <v-card-text class="fill-height" style="overflow-y: scroll; max-height: 65vh">
-            <form @submit.prevent="submit">
-              <v-text-field v-model="lead.name" label="Название" name="name"></v-text-field>
-              <v-text-field
-                v-model="lead.phones"
-                prepend-icon="phone"
-                label="Телефон"
-                name="phones"
-              ></v-text-field>
-              <v-text-field v-model="lead.emails" prepend-icon="email" label="Email" name="emails"></v-text-field>
-              <v-text-field v-model="lead.sites" prepend-icon="web" label="Сайт" name="sites"></v-text-field>
-              <v-text-field
-                v-model="lead.city"
-                prepend-icon="location_city"
-                label="Город"
-                name="city"
-              ></v-text-field>
-              <v-text-field v-model="lead.street" label="Адрес" name="address"></v-text-field>
-              <v-text-field v-model="lead.region" label="Регион" name="region"></v-text-field>
-              <v-text-field v-model="lead.activity" label="Сфера деятельности" name="activity"></v-text-field>
-              <v-text-field v-model="lead.INN" label="ИНН" name="INN"></v-text-field>
-              <v-text-field v-model="lead.KPP" label="КПП" name="KPP"></v-text-field>
-              <multi-select v-model="lead.tags" :items="TAGS" label="Теги"></multi-select>
-              <v-textarea v-model="lead.desc" name="description" label="Описание" rows="3"></v-textarea>
-              <v-text-field v-model="lead.responsible" label="Ответственный" name="responsible"></v-text-field>
-            </form>
+            <v-tabs>
+              <v-tab key="information" href="#information">Информация</v-tab>
+              <v-tab key="scenario" href="#scenario">Сценарий</v-tab>
+              <v-tabs-slider></v-tabs-slider>
+              <v-tab-item value="information">
+                <form @submit.prevent="submit">
+                  <v-text-field v-model="lead.name" label="Название" name="name"></v-text-field>
+                  <v-text-field
+                    dense
+                    v-model="lead.phones"
+                    prepend-icon="phone"
+                    label="Телефон"
+                    name="phones"
+                  ></v-text-field>
+                  <v-text-field
+                    dense
+                    v-model="lead.emails"
+                    prepend-icon="email"
+                    label="Email"
+                    name="emails"
+                  ></v-text-field>
+                  <v-text-field
+                    dense
+                    v-model="lead.sites"
+                    prepend-icon="web"
+                    label="Сайт"
+                    name="sites"
+                  ></v-text-field>
+                  <v-text-field
+                    dense
+                    v-model="lead.city"
+                    prepend-icon="location_city"
+                    label="Город"
+                    name="city"
+                  ></v-text-field>
+                  <v-text-field dense v-model="lead.street" label="Адрес" name="address"></v-text-field>
+                  <v-text-field dense v-model="lead.region" label="Регион" name="region"></v-text-field>
+                  <v-text-field
+                    dense
+                    v-model="lead.activity"
+                    label="Сфера деятельности"
+                    name="activity"
+                  ></v-text-field>
+                  <v-text-field dense v-model="lead.INN" label="ИНН" name="INN"></v-text-field>
+                  <v-text-field dense v-model="lead.KPP" label="КПП" name="KPP"></v-text-field>
+                  <multi-select v-model="lead.tags" :items="TAGS" label="Теги"></multi-select>
+                  <v-textarea
+                    dense
+                    v-model="lead.desc"
+                    name="description"
+                    label="Описание"
+                    rows="2"
+                  ></v-textarea>
+                  <v-text-field
+                    dense
+                    v-model="lead.responsible"
+                    label="Ответственный"
+                    name="responsible"
+                  ></v-text-field>
+                </form>
+              </v-tab-item>
+              <v-tab-item value="scenario">
+                <scenario-tab></scenario-tab>
+              </v-tab-item>
+            </v-tabs>
           </v-card-text>
           <v-card-actions>
             <v-spacer></v-spacer>
@@ -46,7 +86,7 @@
         </v-card>
       </v-col>
       <v-col cols="7">
-        <v-tabs @change="changeTab" flat v-model="tab">
+        <v-tabs flat v-model="tab">
           <v-tabs-slider></v-tabs-slider>
 
           <v-tab v-for="tab in tabs" :key="tab.value" :href="`#${tab.value}`">{{ tab.title }}</v-tab>
@@ -72,9 +112,8 @@ export default {
   data: () => ({
     tab: "",
     tabs: [
-      { title: "Сценарий", value: "scenario", component: "scenario-tab" },
-      { title: "История", value: "history", component: "history-tab" },
-      { title: "Задачи", value: "tasks", component: "tasks-tab" }
+      { title: "Задачи", value: "tasks", component: "tasks-tab" },
+      { title: "История", value: "history", component: "history-tab" }
     ],
     lead: {
       name: "",
@@ -109,9 +148,6 @@ export default {
     ...mapActions(["FETCH_TAGS", "STORE_LEAD", "FETCH_LEAD"]),
     submit(e) {
       this.STORE_LEAD(this.lead);
-    },
-    changeTab(e) {
-      this.$router.replace({ hash: `#${e}` });
     }
   },
   computed: {

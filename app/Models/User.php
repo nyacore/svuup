@@ -7,7 +7,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Tymon\JWTAuth\Contracts\JWTSubject;
 use App\Models\Lead;
-
+use App\Models\Task;
 
 class User extends Authenticatable implements JWTSubject
 {
@@ -41,22 +41,27 @@ class User extends Authenticatable implements JWTSubject
     ];
 
     /**
- * Get the identifier that will be stored in the subject claim of the JWT.
- *
- * @return mixed
-*/
-public function getJWTIdentifier()
-{
-    return $this->getKey();
-}
-
-public function getJWTCustomClaims()
-{
-    return [];
-}
-
-public function leads() {
-    return $this->hasMany(Lead::class);
+     * Get the identifier that will be stored in the subject claim of the JWT.
+     *
+     * @return mixed
+     */
+    public function getJWTIdentifier()
+    {
+        return $this->getKey();
     }
 
+    public function getJWTCustomClaims()
+    {
+        return [];
+    }
+
+    public function leads()
+    {
+        return $this->hasMany(Lead::class);
+    }
+
+    public function tasks()
+    {
+        return $this->hasMany(Task::class);
+    }
 }

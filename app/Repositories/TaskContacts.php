@@ -10,21 +10,17 @@ class TaskContacts extends Controller
 {
     protected $model;
 
-    public function __construct(Task $task){
+    public function __construct(Task $task)
+    {
         $this->model = $task;
     }
 
-    public function getTaskList($request){
-        $id = auth('api')->user()->id;
-        dd($id);
-        if(isset($request->id)){
-            return $this->model->where('lead_id', $request->id);
-        }else{
-        return $this->model->where('user_id', $id)->get();
-        } 
+    public function getTaskList($request)
+    {
+        return auth('api')->user()->tasks()->with('lead')->paginate(10);
     }
 
-    public function getCreateTaskContact($data):object
+    public function getCreateTaskContact($data): object
     {
         $task = new Task();
         $task['lead_id'] = $data['lead_id'];
@@ -42,12 +38,13 @@ class TaskContacts extends Controller
         return $this->model->find($id);
     }
 
-    public function destroyTaskById(int $id):void
+    public function destroyTaskById(int $id): void
     {
         $this->getTaskById($id)->delete();
     }
 
-    public function getUpdateTaskContact(int $id, Request $request){
+    public function getUpdateTaskContact(int $id, Request $request)
+    {
         $task = $this->getTaskById($id);
         $task['lead_id'] = $request['lead_id'];
         $task['user_id'] = $request['user_id'];
@@ -58,5 +55,5 @@ class TaskContacts extends Controller
         $task['comment']    = $request['comment'];
         $task->update();
         return $task;
-    } 
+    }
 }

@@ -11,6 +11,7 @@ window.VueRouter = require('vue-router').default;
 window.vuetify = require('./plugins/vuetify').default;
 window.Vuex = require('vuex').default;
 window.VueToast = require('vue-toast-notification');
+window.DateTimePicker = require('vuetify-datetime-picker').default;
 
 /**
  * The following block of code may be used to automatically register your
@@ -30,6 +31,7 @@ Vue.use(Vuex);
 Vue.use(VueToast, {
     position: 'top'
 });
+Vue.use(DateTimePicker);
 
 const router = require('./routes').default;
 const store = require('./store').default;

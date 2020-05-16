@@ -37,7 +37,7 @@ export default {
                 }
             });
         },
-        async LOGIN_USER({ commit }, data) {
+        async LOGIN_USER({ commit, dispatch }, data) {
             return new Promise(async (resolve, reject) => {
                 try {
                     const response = await window.axios.post('/api/auth/login', data);
@@ -45,6 +45,8 @@ export default {
                     window.localStorage.setItem('api_token', response.data.access_token);
 
                     commit('LOGIN');
+
+                    await dispatch('FETCH_USER');
 
                     resolve();
                 } catch (e) {
