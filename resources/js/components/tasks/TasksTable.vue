@@ -9,6 +9,21 @@
   >
     <template v-slot:top>
       <v-toolbar flat color="white">
+        <v-row>
+          <v-menu
+            v-model="datePicker"
+            :close-on-content-click="false"
+            :nudge-right="40"
+            transition="scale-transition"
+            offset-y
+            min-width="290px"
+          >
+            <template v-slot:activator="{ on }">
+              <v-text-field dense v-model="date" label="Дата" prepend-icon="event" v-on="on"></v-text-field>
+            </template>
+            <v-date-picker v-model="date" @input="datePicker = false"></v-date-picker>
+          </v-menu>
+        </v-row>
         <v-spacer></v-spacer>
         <v-dialog v-model="taskDialog" max-width="500px">
           <template v-slot:activator="{ on }">
@@ -47,6 +62,8 @@ export default {
     }
   },
   data: () => ({
+    date: "",
+    datePicker: false,
     editedTask: {},
     taskDialog: false,
     currentPage: 1,

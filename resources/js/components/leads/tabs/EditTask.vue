@@ -42,6 +42,7 @@ export default {
     }
   },
   data: () => ({
+    date: "",
     timePicker: false,
     datePicker: false,
     dateTime: ""

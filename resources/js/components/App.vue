@@ -115,7 +115,7 @@ export default {
       {
         icon: "contact_support",
         text: "Помощь",
-        route: "support"
+        route: "help"
       }
     ]
   }),

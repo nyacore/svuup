@@ -7,6 +7,10 @@ import ShowLead from '../components/leads/ShowLead';
 import Contacts from '../components/Contacts';
 import Tasks from '../components/tasks/Tasks';
 
+import Reports from '../components/Reports';
+import Calls from '../components/Calls';
+import Help from '../components/Help';
+
 const router = new VueRouter({
     mode: 'history',
 
@@ -44,6 +48,22 @@ const router = new VueRouter({
             path: '/admin/tasks',
             name: 'tasks',
             component: Tasks
+        },
+        {
+            path: '/admin/reports',
+            name: 'reports',
+            component: Reports
+        },
+        {
+            path: '/admin/calls',
+            name: 'calls',
+            component: Calls
+        },
+        {
+
+            path: '/admin/help',
+            name: 'help',
+            component: Help
         },
         {
             path: '/login',
