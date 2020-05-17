@@ -3,9 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Repositories\ContactRepository;
+use App\Http\Controllers\Controller;
 
-class ContactsController extends Controller
+class ContactController extends Controller
 {
+    protected $rep;
+
+    public function __construct(ContactRepository $contact)
+    {
+        $this->rep =$contact;    
+    }
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +21,7 @@ class ContactsController extends Controller
      */
     public function index()
     {
-        //
+        return response()->json($this->rep->getContactsList(), 200);
     }
 
     /**
@@ -34,7 +42,7 @@ class ContactsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**

@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
+use App\Models\Phone;
+use App\Models\Call;
 
 class Lead extends Model
 {
@@ -36,5 +38,15 @@ class Lead extends Model
     public function tasks()
     {
         return $this->hasMany(Task::class);
+    }
+
+    public function phones()
+    {
+        return $this->hasOne(Phone::class);
+    }
+
+    public function calls()
+    {
+        return $this->hasMany(Call::class);
     }
 }

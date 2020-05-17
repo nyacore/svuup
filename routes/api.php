@@ -27,12 +27,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth:api'], static function 
     Route::get('leads/{lead}/tasks', 'PersonalArea\LeadController@tasks');
     Route::resource('leads', 'PersonalArea\LeadController');
     Route::resource('tasks', 'PersonalArea\TaskController');
-    // Route::get('contacts', 'contactsController');
-    // Route::get('reports', 'reportsController');
-    // Route::get('calls','callsController');
-    // Route::get('help','helpController');
-    // Route::get('personal','personalController');
-    // Route::get('team','teamController');
-    // Route::get('balance','balanceController');
-    // Route::get('partner','partnerController');
+    Route::resource('phone','PersonalArea\PhoneController');
+    Route::resource('mail', 'PersonalArea\MailController');
+    Route::resource('contact', 'PersonalArea\ContactController');
 });

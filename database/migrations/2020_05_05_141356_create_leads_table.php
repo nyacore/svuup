@@ -21,6 +21,7 @@ class CreateLeadsTable extends Migration
             $table->string('emails')->unique(); // Электронные почты
             $table->string('sites'); // Сайты
             $table->string('city'); // Город
+            $table->string('time_zone');
             $table->string('street'); // Улица
             $table->string('region'); // Район
             $table->string('activity'); // Сфера деятельности

@@ -6,7 +6,7 @@ use App\Models\Lead;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
-
+use Carbon\Carbon;
 class LeadContacts extends Controller
 {
     protected $model;
@@ -16,7 +16,8 @@ class LeadContacts extends Controller
         $this->model = $lead;
     }
 
-    public function getLeadList(Request $request){
+    public function getLeadList(Request $request)
+    {
         if(isset($request->paginate)){
             $builds = auth('api')->user()->leads()->paginate($request->paginate);
         }else{
@@ -25,11 +26,14 @@ class LeadContacts extends Controller
          if(isset($request->from_date)){
              $builds->whereDate('created_at','>', $request->from_date);
          };
+         if(isset($request->time_zone)){
+
+         }
          if(isset($request->to_date)){
             $builds->whereDate('created_at','<', $request->to_date);
         };
-        if (isset($request->to_date)) {
-            $builds->whereDate('created_at', '<', $request->to_date);
+        if (isset($request->for_date)) {
+            $builds->whereDate('created_at', '>', $request->for_date);
         };
         if (isset($request->tag)) {
             return $builds->where('tags', $request->tag);
@@ -39,25 +43,27 @@ class LeadContacts extends Controller
 
     public function getCreateLeadContact($data): object
     {
-        // $contact = new Lead();
-        // $contact['user_id'] = $data['user_id'];
-        // $contact['name']    = $data['name'];
-        // $contact['phones']  = $data['phones'];
-        // $contact['emails']  = $data['emails'];
-        // $contact['sites']   = $data['sites'];
-        // $contact['city']    = $data['city'];
-        // $contact['street']  = $data['street'];
-        // $contact['region']  = $data['region'];
-        // $contact['activity']= $data['activity'];
-        // $contact['INN']     = $data['INN'];
-        // $contact['KPP']     = $data['KPP'];
-        // $contact['tags']    = $data['tags'];
-        // $contact['desc']    = $data['desc'];
-        // $contact['responsible']= $data['responsible'];
-        // $contact->save();
+        $contact = new Lead();
+        $contact['user_id'] = $data['user_id'];
+        $contact['name']    = $data['name'];
+        $contact['phones']  = $data['phones'];
+        $contact['emails']  = $data['emails'];
+        $contact['sites']   = $data['sites'];
+        $contact['city']    = $data['city'];
+        $contact['street']  = $data['street'];
+        $contact['time_zone']= Carbon::now()->timezone_type;
+        $contact['region']  = $data['region'];
+        $contact['activity']= $data['activity'];
+        $contact['INN']     = $data['INN'];
+        $contact['KPP']     = $data['KPP'];
+        $contact['tags']    = $data['tags'];
+        $contact['desc']    = $data['desc'];
+        $contact['responsible']= $data['responsible'];
+        $contact->save();
 
-        return auth('api')->user()->leads()->save(new Lead($data->all()));
+        return $contact;
     }
+
 
     public function getLeadById(int $id)
     {
