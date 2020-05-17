@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
+use App\Models\Phone;
+use App\Models\Call;
 
 class Lead extends Model 
 {
@@ -32,4 +34,12 @@ class Lead extends Model
     ];
 
     protected $table = 'leads';
+
+    public function phones(){
+        return $this->hasOne(Phone::class);
+    }
+
+    public function last_call(){
+        return $this->hasMany(Call::class);
+    }
 }
