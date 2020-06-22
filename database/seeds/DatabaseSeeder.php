@@ -1,9 +1,11 @@
 <?php
 
 use App\Models\Lead;
+use App\Models\Role;
 use App\Models\Task;
 use App\Models\User;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -14,16 +16,26 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $user = User::find(1);
+        (new Role([
+            'name' => 'Администратор',
+            'stub' => 'admin'
+        ]))->save();
 
-        $leads = factory(Lead::class, 5)->create();
+        (new Role([
+            'name' => 'Преподаватель',
+            'stub' => 'teacher'
+        ]))->save();
 
-        $leads->each(function ($lead) use ($user) {
-            $lead->tasks()->saveMany(factory(Task::class, 5)->create([
-                'lead_id' => $lead->id,
-                'contact' => $lead->name,
-                'performer' => $user->name
-            ]));
-        });
+        (new Role([
+            'name' => 'Студент',
+            'stub' => 'student'
+        ]))->save();
+
+        (new User([
+            'name' => 'Администратор',
+            'password' => Hash::make('secret'),
+            'role_id' => Role::where('stub', 'admin')->first()->id,
+            'email' => 'bjadmund@mail.ru'
+        ]))->save();
     }
 }

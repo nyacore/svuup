@@ -23,11 +23,15 @@ Route::group([
     Route::post('me', 'Auth\AuthController@me');
 });
 
-Route::group(['prefix' => 'admin', 'middleware' => 'auth:api'], static function () {
-    Route::get('leads/{lead}/tasks', 'PersonalArea\LeadController@tasks');
-    Route::resource('leads', 'PersonalArea\LeadController');
-    Route::resource('tasks', 'PersonalArea\TaskController');
-    Route::resource('phone','PersonalArea\PhoneController');
-    Route::resource('mail', 'PersonalArea\MailController');
-    Route::resource('contact', 'PersonalArea\ContactController');
-});
+Route::resource('users', UserController::class);
+Route::resource('faculties', FacultyController::class);
+Route::post('specialities/{id}/disciplines', SpecialityController::class . '@disciplines');
+Route::resource('specialities', SpecialityController::class);
+Route::resource('roles', RoleController::class);
+Route::resource('disciplines', DisciplineController::class);
+Route::post('groups/{id}/user', GroupController::class . '@user');
+Route::resource('groups', GroupController::class);
+Route::resource('events', EventController::class);
+Route::resource('marks', MarkController::class);
+Route::resource('threads', ThreadController::class);
+Route::resource('messages', MessageController::class);

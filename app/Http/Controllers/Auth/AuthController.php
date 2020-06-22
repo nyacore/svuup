@@ -1,9 +1,11 @@
-<?php 
+<?php
+
 namespace App\Http\Controllers\Auth;
 
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 
 class AuthController extends Controller
 {
@@ -27,7 +29,7 @@ class AuthController extends Controller
     public function login()
     {
         $credentials = request(['email', 'password']);
-        if (! $token = auth()->attempt($credentials)) {
+        if (!$token = auth()->attempt($credentials)) {
             return response()->json(['error' => 'Unauthorized'], 401);
         }
 
@@ -37,17 +39,15 @@ class AuthController extends Controller
     /**
      * User registration
      */
-    public function registration()
+    public function registration(Request $request)
     {
-        $name = request('name');
-        $email = request('email');
-        $password = request('password');
+        $password = Hash::make($request->password);
 
-        $user = new User();
-        $user->name = $name;
-        $user->email = $email;
-        $user->password = Hash::make($password);
-        $user->save();
+        (new User([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => $password
+        ]))->save();
 
         return response()->json(['message' => 'Successfully registration!']);
     }
@@ -98,9 +98,5 @@ class AuthController extends Controller
             'token_type' => 'bearer',
             'expires_in' => auth()->factory()->getTTL() * 60
         ]);
-    }
-
-    public function firstRegistration(Request $request){
-
     }
 }

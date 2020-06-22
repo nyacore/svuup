@@ -25,6 +25,8 @@
                 prepend-icon="lock"
                 type="password"
               />
+
+              <input type="submit" style="display: none" />
             </v-form>
           </v-card-text>
           <v-card-actions>
@@ -53,8 +55,7 @@ export default {
           email: this.email,
           password: this.password
         });
-        console.log(this.LOGGED_IN);
-        this.$router.push({ name: "leads" });
+        this.$router.push({ name: "learning" });
       } catch (e) {
         this.$toast.error("Неверный логин или пароль");
       }
@@ -62,7 +63,7 @@ export default {
   },
   mounted() {
     if (this.LOGGED_IN) {
-      this.$router.push({ name: "leads" });
+      this.$router.push({ name: "learning" });
     }
   },
   computed: {

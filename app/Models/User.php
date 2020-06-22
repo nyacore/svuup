@@ -19,7 +19,7 @@ class User extends Authenticatable implements JWTSubject
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'role_id', 'group_id'
     ];
 
     /**
@@ -31,14 +31,7 @@ class User extends Authenticatable implements JWTSubject
         'password', 'remember_token',
     ];
 
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+    protected $with = ['role', 'group'];
 
     /**
      * Get the identifier that will be stored in the subject claim of the JWT.
@@ -55,13 +48,23 @@ class User extends Authenticatable implements JWTSubject
         return [];
     }
 
-    public function leads()
+    public function role()
     {
-        return $this->hasMany(Lead::class);
+        return $this->belongsTo(Role::class);
     }
 
-    public function tasks()
+    public function disciplines()
     {
-        return $this->hasMany(Task::class);
+        return $this->hasMany(Discipline::class);
+    }
+
+    public function group()
+    {
+        return $this->belongsTo(Group::class);
+    }
+
+    public function threads()
+    {
+        return $this->belongsToMany(Thread::class, 'user_thread', 'user_id', 'thread_id');
     }
 }

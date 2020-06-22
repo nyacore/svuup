@@ -1,74 +1,49 @@
 import VueRouter from 'vue-router';
 
-import Login from '../components/auth/Login';
-import Leads from '../components/leads/Leads';
-import CreateLead from '../components/leads/CreateLead';
-import ShowLead from '../components/leads/ShowLead';
-import Contacts from '../components/Contacts';
-import Tasks from '../components/tasks/Tasks';
+import admin from './admin';
+import teacher from './teacher';
 
-import Reports from '../components/Reports';
-import Calls from '../components/Calls';
-import Help from '../components/Help';
+import Login from '../components/auth/Login';
+import Learning from '../components/Learning';
+import Messages from '../components/Messages';
+import Thread from '../components/Thread';
+import Info from '../components/Info';
+import Events from '../components/Events';
+
 
 const router = new VueRouter({
     mode: 'history',
 
     routes: [
-        {
-            path: '/',
-            redirect: '/admin'
-        },
-        {
-            path: '/admin',
-            name: 'home',
-            component: Leads,
-        },
-        {
-            path: '/admin/leads',
-            name: 'leads',
-            component: Leads,
-        },
-        {
-            path: '/admin/leads/create',
-            name: 'leads.create',
-            component: CreateLead
-        },
-        {
-            path: '/admin/leads/:id',
-            name: 'leads.show',
-            component: ShowLead
-        },
-        {
-            path: '/admin/contacts',
-            name: 'contacts',
-            component: Contacts
-        },
-        {
-            path: '/admin/tasks',
-            name: 'tasks',
-            component: Tasks
-        },
-        {
-            path: '/admin/reports',
-            name: 'reports',
-            component: Reports
-        },
-        {
-            path: '/admin/calls',
-            name: 'calls',
-            component: Calls
-        },
-        {
-
-            path: '/admin/help',
-            name: 'help',
-            component: Help
-        },
+        ...admin,
+        ...teacher,
         {
             path: '/login',
             name: 'login',
             component: Login
+        },
+        {
+            path: '/learning',
+            component: Learning,
+            children: [{
+                path: '/',
+                name: 'learning',
+                component: Info
+            }, {
+                path: '/events/:discipline',
+                name: 'events',
+                component: Events
+            }]
+        },
+        {
+            path: '/messages',
+            name: 'messages',
+            component: Messages
+        },
+        {
+            path: '/messages/:thread',
+            name: 'messages.thread',
+            component: Thread
         }
     ]
 });

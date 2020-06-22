@@ -1,7 +1,9 @@
 export default {
     state: () => ({
         isLoggedIn: !!localStorage.getItem('api_token'),
-        user: {}
+        user: {
+            role: {}
+        }
     }),
 
     mutations: {
